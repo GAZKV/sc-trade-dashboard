@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Star Citizen Trade Dashboard</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+  <header>
+    <h1>Star Citizen Trade Dashboard</h1>
+    <small id="last-update">waiting for data…</small>
+  </header>
+
+  <!-- KPI cards -->
+  <section class="cards">
+    <div class="card kpi"><h2>Total Profit</h2><p id="profit">–</p></div>
+    <div class="card kpi"><h2>Total Buys</h2><p id="buys">–</p></div>
+    <div class="card kpi"><h2>Total Sells</h2><p id="sells">–</p></div>
+  </section>
+
+  <!-- Chart -->
+  <canvas id="profitChart" class="chart"></canvas>
+
+  <!-- Tables -->
+  <section>
+    <h2>Buy Summary</h2>
+    <table id="buyTable" class="data-table"></table>
+  </section>
+  <section>
+    <h2>Sell Summary</h2>
+    <table id="sellTable" class="data-table"></table>
+  </section>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
