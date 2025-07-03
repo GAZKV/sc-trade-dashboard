@@ -4,7 +4,12 @@ function updateDashboard(data) {
   if (!data.kpi) return; // bootstrap state
 
   // KPI widgets
-  set("profit", data.kpi.total_profit_sc.toLocaleString());
+  set(
+    "profit",
+    data.kpi.total_profit_sc.toLocaleString(undefined, {
+      maximumFractionDigits: 2,
+    })
+  );
   set("buys",   data.kpi.total_buys.toLocaleString());
   set("sells",  data.kpi.total_sells.toLocaleString());
   document.getElementById("last-update").textContent =
@@ -61,6 +66,12 @@ function populateTable(id, rows) {
   const tbody = tbl.createTBody();
   rows.forEach(r => {
     const tr = tbody.insertRow();
-    Object.values(r).forEach(v => tr.insertCell().textContent = v);
+    Object.values(r).forEach(v => {
+      const cell = tr.insertCell();
+      cell.textContent =
+        typeof v === "number"
+          ? v.toLocaleString(undefined, { maximumFractionDigits: 2 })
+          : v;
+    });
   });
 }
