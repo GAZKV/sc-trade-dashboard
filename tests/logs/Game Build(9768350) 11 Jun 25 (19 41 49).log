@@ -1,0 +1,617 @@
+<2025-06-12T01:41:59.103Z> BackupNameAttachment=" Build(9768350) 11 Jun 25 (19 41 49)"  -- used by backup system
+<2025-06-12T01:41:59.103Z> Log started on Thu Jun 12 01:41:59 2025
+<2025-06-12T01:41:59.103Z> Built on May 14 2025 18:58:07
+<2025-06-12T01:41:59.103Z> Running 64 bit version
+<2025-06-12T01:41:59.104Z> Executable: C:\Program Files\Roberts Space Industries\StarCitizen\LIVE\Bin64\StarCitizen.exe
+<2025-06-12T01:41:59.104Z> FileVersion: 4.1.149.3486
+<2025-06-12T01:41:59.104Z> ProductVersion: 4.1.149.3486
+<2025-06-12T01:41:59.104Z> Using Microsoft (tm) C++ Standard Library implementation
+<2025-06-12T01:41:59.104Z> Host CPU: Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+<2025-06-12T01:41:59.104Z> Logical CPU Count: 24
+<2025-06-12T01:41:59.104Z> [Trace] Environment:   PUB
+<2025-06-12T01:41:59.104Z> [Trace] Elastic:       https://cedar.rsi.global/app/discover
+<2025-06-12T01:41:59.104Z> [Trace] @session:      'c87544f3-b6a0-4849-b857-39d7c24663bd'
+<2025-06-12T01:41:59.104Z> [Trace] @env_session:  'pub-sc-alpha-411-9759283'
+<2025-06-12T01:41:59.104Z> [Trace] @host_session: 'local_shard'
+<2025-06-12T01:41:59.104Z> [Trace] Instance-Logs: https://cedar.rsi.global/app/discover#/?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'2025-06-12T01:41:44.104Z',to:'2025-06-13T01:41:59.104Z'))&_a=(columns:!('@msg_idx',severity,'@product',tags,event,message),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,key:'@env_session',negate:!f,params:(query:'pub-sc-alpha-411-9759283'),type:phrase),query:(match_phrase:('@env_session':'pub-sc-alpha-411-9759283'))),('$state':(store:appState),meta:(alias:!n,disabled:!f,key:'@host_session',negate:!f,params:(query:'local_shard'),type:phrase),query:(match_phrase:('@host_session':'local_shard'))),('$state':(store:appState),meta:(alias:!n,disabled:!f,key:'@session',negate:!f,params:(query:'c87544f3-b6a0-4849-b857-39d7c24663bd'),type:phrase),query:(match_phrase:('@session':'c87544f3-b6a0-4849-b857-39d7c24663bd')))),grid:(columns:('@msg_idx':(width:75.33333333333331),'@product':(width:111.63333333333333),event:(width:252.4666666666667),severity:(width:84.13333333333333),tags:(width:243.9666666666667))),interval:auto,query:(language:kuery,query:''),sort:!(!('@timestamp',desc),!('@msg_idx',desc)))
+<2025-06-12T01:41:59.113Z> ===============================================================
+<2025-06-12T01:41:59.114Z>  Startup Arguments 
+<2025-06-12T01:41:59.114Z> ===============================================================
+<2025-06-12T01:41:59.114Z> [Notice] <Startup Settings> 6 settings set: [Team_OnlineTech][System][Initialization]
+<2025-06-12T01:41:59.114Z>    [Cmdline  ] --system-trace-service-enabled=true
+<2025-06-12T01:41:59.114Z>    [Cmdline  ] --system-trace-env-id='pub-sc-alpha-411-9759283'
+<2025-06-12T01:41:59.114Z>    [Cmdline  ] --services-config-enabled=true
+<2025-06-12T01:41:59.114Z>    [Cmdline  ] --client-login-show-dialog=0
+<2025-06-12T01:41:59.114Z>    [Cmdline  ] --grpc-client-endpoint-override='https://pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443'
+<2025-06-12T01:41:59.114Z>    [Cmdline* ] --envtag='PUB'
+<2025-06-12T01:41:59.114Z> [Notice] <Legacy Arguments Used> 1 legacy commandline arguments used in user.cfg(): [Team_OnlineTech][System][Initialization]
+<2025-06-12T01:41:59.114Z>    -envtag (Please use '--system-startup-env-tag' instead)
+<2025-06-12T01:41:59.114Z> ===============================================================
+<2025-06-12T01:41:59.213Z> [Notice] <CreateChannel> Opening channel for 'sc.external.services.configuration.v1.ConfigService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:41:59.213Z>    grpc.primary_user_agent=grpc-c++/1.49.2
+<2025-06-12T01:41:59.213Z>    grpc.http2.max_pings_without_data=0
+<2025-06-12T01:41:59.213Z>    grpc.max_receive_message_length=16777216
+<2025-06-12T01:41:59.213Z>    grpc.max_send_message_length=4194304
+<2025-06-12T01:41:59.213Z>    grpc.keepalive_permit_without_calls=1
+<2025-06-12T01:41:59.213Z>    grpc.keepalive_time_ms=120000
+<2025-06-12T01:41:59.213Z>    grpc.keepalive_timeout_ms=20000
+<2025-06-12T01:41:59.213Z>    grpc.http2.min_time_between_pings_ms=10000
+<2025-06-12T01:41:59.213Z>    grpc.http2.min_ping_interval_without_data_ms=5000
+<2025-06-12T01:42:00.264Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.analytics.v1.AnalyticsService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:00.265Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.push.v1.PushService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:00.266Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.presence.v1.PresenceService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:00.267Z> [Notice] <Default Trace Config loaded> Config 'CODE' loaded (Version 2) [Team_OnlineTech][Config][CigTrace]
+<2025-06-12T01:42:00.267Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.trace.v1.TraceService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:00.267Z> [Notice] <Stream started> Result: OK(0) [Team_OnlineTech][CigTrace]
+<2025-06-12T01:42:00.267Z> Windows 10 64 bit (build 10.0.19045)
+<2025-06-12T01:42:00.293Z> System language: Spanish
+<2025-06-12T01:42:00.293Z> Windows Directory: "C:\Windows"
+<2025-06-12T01:42:00.293Z> Local time is 19:42:00 06/11/25, system running for 8 minutes
+<2025-06-12T01:42:00.293Z> 128929MB physical memory installed, 117013MB available, 9 percent of memory in use
+<2025-06-12T01:42:00.322Z> 717MB working set, 1039MB commit size (2093MB peak), 130979MB left to commit (147361MB system wide commit limit)
+<2025-06-12T01:42:00.322Z> Current display mode is 2560x1440x32
+<2025-06-12T01:42:00.349Z> IBM enhanced (101/102-key) keyboard and 5+ button mouse installed
+<2025-06-12T01:42:00.349Z> [CIG] gEnv->IsDedicated[0] CSystem::m_bDedicatedServer[0] startupParams.bDedicatedServer[0]
+<2025-06-12T01:42:00.349Z> [CIG] startupParams.szSystemCmdLine["C:\Program Files\Roberts Space Industries\StarCitizen\LIVE\Bin64/StarCitizen.exe" -no_login_dialog -envtag PUB --client-login-show-dialog 0 --services-config-enabled 1 --system-trace-service-enabled 1 --system-trace-env-id pub-sc-alpha-411-9759283 --grpc-client-endpoint-override https://pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443]
+<2025-06-12T01:42:00.350Z> [Notice] <Init> Process sc-client started (Local: c87544f3-b6a0-4849-b857-39d7c24663bd. Env: pub-sc-alpha-411-9759283). bDedicatedServer[0] bIsService[0] bIsHeadlessClient[0] bOnline[1] bShardPersistence[1] bTools[0] szSystemCmdLine["C:\Program Files\Roberts Space Industries\StarCitizen\LIVE\Bin64/StarCitizen.exe" -no_login_dialog -envtag PUB --client-login-show-dialog 0 --services-config-enabled 1 --system-trace-service-enabled 1 --system-trace-env-id pub-sc-alpha-411-9759283 --grpc-client-endpoint-override https://pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443]  [Team_OnlineTech][ProcessInit]
+<2025-06-12T01:42:00.359Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [sys_spec] is marked [Not Whitelisted] with a value of [0]; config file attempting to change to [-1] - IGNORING
+<2025-06-12T01:42:00.363Z> Stream Engine Initialization
+<2025-06-12T01:42:00.363Z> Branch: sc-alpha-4.1.1
+<2025-06-12T01:42:00.363Z> BuildDateStamp: Wed May 14 2025
+<2025-06-12T01:42:00.363Z> BuildTimeStamp: 08:19:03 PM CST
+<2025-06-12T01:42:00.363Z> Config: shipping
+<2025-06-12T01:42:00.363Z> Tag: public
+<2025-06-12T01:42:00.363Z> Changelist: 9768350
+<2025-06-12T01:42:00.363Z> ShelveCL: 0
+<2025-06-12T01:42:00.363Z> Video Capture initialization
+<2025-06-12T01:42:00.368Z> CIG Backend initialization
+<2025-06-12T01:42:00.369Z> [CIG] build_version[9768350]
+<2025-06-12T01:42:00.370Z> Physics initialization
+<2025-06-12T01:42:00.384Z> [Notice] <Online Trace Config updated> Config '/cig_trace/environment:PUB/product:sc-client/trace_filter' (Version 6) loaded [Team_OnlineTech][Config][CigTrace]
+<2025-06-12T01:42:00.596Z> <Audio>: AudioSystem initialization
+<2025-06-12T01:42:00.616Z> [Audio] Wwise Init : Output Buffer (1024 x 4) : API=WASAPI
+<2025-06-12T01:42:00.626Z> Renderer initialization
+<2025-06-12T01:42:00.995Z> Logging video adapters:
+<2025-06-12T01:42:04.956Z> - NVIDIA GeForce RTX 4070 Ti SUPER (vendor = 0x10de, device = 0x2705)
+<2025-06-12T01:42:04.956Z>   - Adapter index: 0
+<2025-06-12T01:42:04.956Z>   - Dedicated video memory: 16063 MB
+<2025-06-12T01:42:04.956Z>   - Feature level: DX11.1 (SM 5.0)
+<2025-06-12T01:42:04.956Z>   - Displays connected: yes
+<2025-06-12T01:42:04.957Z>   - Suitable rendering device: yes
+<2025-06-12T01:42:05.129Z> - Microsoft Basic Render Driver (vendor = 0x1414, device = 0x008c)
+<2025-06-12T01:42:05.129Z>   - Adapter index: 1
+<2025-06-12T01:42:05.129Z>   - Dedicated video memory: 0 MB
+<2025-06-12T01:42:05.129Z>   - Feature level: DX11.1 (SM 5.0)
+<2025-06-12T01:42:05.129Z>   - Displays connected: no
+<2025-06-12T01:42:05.129Z>   - Suitable rendering device: no
+<2025-06-12T01:42:05.133Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [r_HDRDisplayMaxNits] is marked [Not Whitelisted] with a value of [1500]; config file attempting to change to [750] - IGNORING
+<2025-06-12T01:42:05.133Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [r_enable_full_gpu_sync] is marked [Not Whitelisted] with a value of [0]; config file attempting to change to [0      ; evita sincronizar cada draw-call] - IGNORING
+<2025-06-12T01:42:05.133Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [r_GetScreenShot] is marked [Not Whitelisted] with a value of [0]; config file attempting to change to [1] - IGNORING
+<2025-06-12T01:42:05.133Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [r_displayFrameGraph] is marked [Not Whitelisted] with a value of [0]; config file attempting to change to [1        ; micro-overlay con barras MT/GPU] - IGNORING
+<2025-06-12T01:42:06.219Z> CPU benchmark: 52.29 ms (int+mem), 54.63 ms (fp+mem)
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_NV_optimus (NVIDIA Optimus layer) Version: 1.4.303
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_NV_present (NVIDIA GR2608 layer) Version: 1.4.303
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: GalaxyOverlayVkLayer (Galaxy Overlay Vulkan Layer) Version: 1.1.73
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: GalaxyOverlayVkLayer_VERBOSE (Galaxy Overlay Vulkan Layer) Version: 1.1.73
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: GalaxyOverlayVkLayer_DEBUG (Galaxy Overlay Vulkan Layer) Version: 1.1.73
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_OW_OVERLAY (Overwolf Overlay Layer) Version: 1.2.131
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_OW_OBS_HOOK (OWOBS hook) Version: 1.2.131
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_MEDIASDK_HOOK (MediaSDK) Version: 1.3.239
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_VALVE_steam_overlay (Steam Overlay Layer) Version: 1.3.207
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_VALVE_steam_fossilize (Steam Pipeline Caching Layer) Version: 1.4.303
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_OBS_HOOK (Open Broadcaster Software hook) Version: 1.3.216
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_RTSS (RTSS overlay hook bootstrap) Version: 1.3.224
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_EOS_Overlay (Vulkan overlay layer for Epic Online Services) Version: 1.2.136
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_EOS_Overlay (Vulkan overlay layer for Epic Online Services) Version: 1.2.136
+<2025-06-12T01:42:06.506Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_ROCKSTAR_GAMES_social_club (Rockstar Games Social Club Layer) Version: 1.0.70
+<2025-06-12T01:42:08.852Z> GPU benchmark: 19.12 ms (Adapter index: 0, Num GPUs: 1)
+<2025-06-12T01:42:09.438Z> VulkanMetric - Device (NVIDIA GeForce RTX 4070 Ti SUPER) [GPU (Discrete)] ID:9989
+<2025-06-12T01:42:09.438Z> VulkanMetric -     Driver 576.28.0.0
+<2025-06-12T01:42:09.438Z> VulkanMetric -     VulkanAPI 1.4.303
+<2025-06-12T01:42:09.438Z> VulkanMetric -     Supports 6 Queue Families
+<2025-06-12T01:42:09.438Z> VulkanMetric - Device (NVIDIA GeForce RTX 4070 Ti SUPER) valid GPU
+<2025-06-12T01:42:09.438Z> [VK] Chosen Vulkan GPU Device (NVIDIA GeForce RTX 4070 Ti SUPER) Driver Version (576.28.0.0) Vulkan API (1.4.303) 
+<2025-06-12T01:42:09.438Z> [VK] Current Device: (NVIDIA GeForce RTX 4070 Ti SUPER) VendorID: (4318)
+<2025-06-12T01:42:09.438Z> [VK] Current Device: (NVIDIA GeForce RTX 4070 Ti SUPER) VendorID: (4318)
+<2025-06-12T01:42:09.439Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_RTSS" (C:\Program Files (x86)\RivaTuner Statistics Server\Vulkan\.\RTSSVkLayer64.dll)
+<2025-06-12T01:42:09.439Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_OBS_HOOK" (C:\ProgramData\obs-studio-hook\.\graphics-hook64.dll)
+<2025-06-12T01:42:09.439Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_MEDIASDK_HOOK" (C:\Program Files\TikTok LIVE Studio\0.83.2\resources\app\electron\sdk\lib\MediaSDK_V2\.\plugins\game_detour_64.dll)
+<2025-06-12T01:42:09.439Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_OW_OBS_HOOK" (C:\Program Files (x86)\Overwolf\0.275.0.13\.\ow-graphics-vulkan.dll)
+<2025-06-12T01:42:09.439Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_OW_OVERLAY" (C:\Program Files (x86)\Overwolf\0.275.0.13\.\owclient.dll)
+<2025-06-12T01:42:09.439Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_NV_present" (C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\.\nvoglv64.dll)
+<2025-06-12T01:42:09.439Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_NV_optimus" (C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\.\nvoglv64.dll)
+<2025-06-12T01:42:09.439Z> [VK_INFO] - Loader Message | vkCreateDevice layer callstack setup to:
+<2025-06-12T01:42:09.439Z> [VK_INFO] - Loader Message |    <Application>
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |      ||
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |    <Loader>
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |      ||
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |    VK_LAYER_NV_optimus
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_LAYER_NV_OPTIMUS_1
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |            Manifest: C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\nv-vk64.json
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |            Library:  C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\.\nvoglv64.dll
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |      ||
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |    VK_LAYER_NV_present
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_LAYER_NV_GR2608_1
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |            Manifest: C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\nv-vk64.json
+<2025-06-12T01:42:09.440Z> [VK_INFO] - Loader Message |            Library:  C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\.\nvoglv64.dll
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |      ||
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |    VK_LAYER_OW_OVERLAY
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_VULKAN_OW_OVERLAY_LAYER
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |            Manifest: C:\Program Files (x86)\Overwolf\0.275.0.13\ow-vulkan-overlay64.json
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |            Library:  C:\Program Files (x86)\Overwolf\0.275.0.13\.\owclient.dll
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |      ||
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |    VK_LAYER_OW_OBS_HOOK
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_VULKAN_OW_OBS_CAPTURE
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |            Manifest: C:\Program Files (x86)\Overwolf\0.275.0.13\ow-graphics-vulkan64.json
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |            Library:  C:\Program Files (x86)\Overwolf\0.275.0.13\.\ow-graphics-vulkan.dll
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |      ||
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |    VK_LAYER_MEDIASDK_HOOK
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-12T01:42:09.441Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_VK_LAYER_MEDIASDK_HOOK_1
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |            Manifest: C:\Program Files\TikTok LIVE Studio\0.83.2\resources\app\electron\sdk\lib\MediaSDK_V2\MediaSDKVulkanLayer64.json
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |            Library:  C:\Program Files\TikTok LIVE Studio\0.83.2\resources\app\electron\sdk\lib\MediaSDK_V2\.\plugins\game_detour_64.dll
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |      ||
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |    VK_LAYER_OBS_HOOK
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_VULKAN_OBS_CAPTURE
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |            Manifest: C:\ProgramData\obs-studio-hook\obs-vulkan64.json
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |            Library:  C:\ProgramData\obs-studio-hook\.\graphics-hook64.dll
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |      ||
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |    VK_LAYER_RTSS
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_RTSS_LAYER
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |            Manifest: C:\Program Files (x86)\RivaTuner Statistics Server\Vulkan\RTSSVkLayer64.json
+<2025-06-12T01:42:09.442Z> [VK_INFO] - Loader Message |            Library:  C:\Program Files (x86)\RivaTuner Statistics Server\Vulkan\.\RTSSVkLayer64.dll
+<2025-06-12T01:42:09.443Z> [VK_INFO] - Loader Message |      ||
+<2025-06-12T01:42:09.443Z> [VK_INFO] - Loader Message |    <Device>
+<2025-06-12T01:42:09.443Z> [VK_INFO] - Loader Message |        Using "NVIDIA GeForce RTX 4070 Ti SUPER" with driver: "C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\.\nvoglv64.dll"
+<2025-06-12T01:42:11.869Z> Performance Index: 161.36 (CPU), 538.73 (GPU)
+<2025-06-12T01:42:11.943Z> [VK] Available Surface Formats for Physical Device -
+<2025-06-12T01:42:11.943Z> 	Format: B8G8R8A8_UNORM, ColorSpace: SRGB_NONLINEAR
+<2025-06-12T01:42:11.943Z> 	Format: B8G8R8A8_SRGB, ColorSpace: SRGB_NONLINEAR
+<2025-06-12T01:42:11.943Z> 	Format: R8G8B8A8_UNORM, ColorSpace: SRGB_NONLINEAR
+<2025-06-12T01:42:11.943Z> 	Format: R8G8B8A8_SRGB, ColorSpace: SRGB_NONLINEAR
+<2025-06-12T01:42:11.943Z> 	Format: A2B10G10R10_UNORM_PACK32, ColorSpace: SRGB_NONLINEAR
+<2025-06-12T01:42:11.943Z> [VK] Found requested Surface Format: R8G8B8A8_UNORM
+<2025-06-12T01:42:12.229Z> GPUCount: 1
+<2025-06-12T01:42:12.229Z> GPU: Vendor = NVIDIA
+<2025-06-12T01:42:12.229Z> GPU: DedicatedVidMemMB = 15295
+<2025-06-12T01:42:12.229Z> GPU: NVidia-Surround or AMD-Eyefinity = Disabled
+<2025-06-12T01:42:12.229Z> GPU: Architecture = 
+<2025-06-12T01:42:12.229Z> GPU: Compute Core Count = 8448
+<2025-06-12T01:42:12.229Z> GPU: Core Clock MHz = 0
+<2025-06-12T01:42:12.229Z> GPU: Memory Clock MHz = 0
+<2025-06-12T01:42:12.229Z> GPU: Teraflops (Calculated from iCoreClock * iNumCUs * 64 Pixels/clk * 2 instructions/MAD) = 0.000000
+<2025-06-12T01:42:13.961Z> Loaded VK PSO Cache (1144.56mb)(2.096s)
+<2025-06-12T01:42:16.637Z> GPU: DLSS Support = Available
+<2025-06-12T01:42:16.668Z> [PSOCacheGen] Loaded PSOCache (270754 entries)(0.524s)
+<2025-06-12T01:42:18.636Z> Texture Streaming: Fixed memory requirement = 2965. (Includes texture lib size)
+<2025-06-12T01:42:18.636Z> Texture Streaming: Usable VRAM = 12236
+<2025-06-12T01:42:18.636Z> Texture Streaming: Actual pool size = 4000
+<2025-06-12T01:42:18.639Z> Runtime GPU Memory: Committed: 2138 MB
+<2025-06-12T01:42:18.639Z> Runtime GPU Memory: Dedicated: 1418 MB (All: 2645 MB)
+<2025-06-12T01:42:18.639Z> Runtime GPU Memory: Shared:  644 MB (All:  799 MB)
+<2025-06-12T01:42:18.901Z> Font initialization
+<2025-06-12T01:42:18.906Z> Network initialization
+<2025-06-12T01:42:18.907Z> Profile 'off' not recognized
+<2025-06-12T01:42:18.907Z> Profile 'off' not recognized
+<2025-06-12T01:42:18.925Z> network hostname: DESKTOP-LIVN2H7
+<2025-06-12T01:42:18.925Z>   ip:192.168.1.85
+<2025-06-12T01:42:18.926Z> [Notice] <Socket Buffer Size> BindAddress[0.0.0.0:64090] isSend[1] original[65536] requested[1048576] result[1048576] [Team_Network][Network][Gateway][Socket]
+<2025-06-12T01:42:18.926Z> [Notice] <Socket Buffer Size> BindAddress[0.0.0.0:64090] isSend[0] original[65536] requested[1048576] result[1048576] [Team_Network][Network][Gateway][Socket]
+<2025-06-12T01:42:18.926Z> [Notice] <Socket Init> Initialized UDP socket [70552] bound to [0.0.0.0:64090] send buffer [1048576] recv buffer [1048576] [Team_Network][Network][Gateway][Socket]
+<2025-06-12T01:42:18.932Z> Discipline initialization
+<2025-06-12T01:42:18.932Z> [Notice] <CDisciplineServiceExternal::Init> Initialize Discipline Service; Spawning Thread [Team_GameServices][AntiCheat]
+<2025-06-12T01:42:18.947Z> [Notice] <CDisciplineServiceExternal::Init> Init phase 1 [Team_GameServices][AntiCheat]
+<2025-06-12T01:42:18.990Z> [Notice] <CDisciplineServiceExternal::Init> Init phase 2 [Team_GameServices][AntiCheat]
+<2025-06-12T01:42:19.004Z> [Notice] <CDisciplineServiceExternal::Init> Init phase 3 [Team_GameServices][AntiCheat]
+<2025-06-12T01:42:19.005Z> MovieSystem initialization
+<2025-06-12T01:42:19.014Z> Console initialization
+<2025-06-12T01:42:19.015Z> Time initialization
+<2025-06-12T01:42:19.015Z> Input initialization
+<2025-06-12T01:42:19.149Z> Initializing Animation System
+<2025-06-12T01:42:19.151Z> Initializing 3D Engine
+<2025-06-12T01:42:19.164Z> Initializing default materials...
+<2025-06-12T01:42:20.111Z> Entity system initialization
+<2025-06-12T01:42:20.121Z> Initializing AI System
+<2025-06-12T01:42:20.123Z> SubsumptionManager - Random generator seeded with value 58867760
+<2025-06-12T01:42:20.139Z> Floating point exceptions disabled.
+<2025-06-12T01:42:20.407Z> !!! Failed to register RPC [RPC.DGS.CommArray.Manage]
+<2025-06-12T01:42:20.407Z> [Notice] <CContractGenerator::CContractGenerator> Initializing Contract Generator with seed 1734289042 [Team_MissionFeatures][Missions]
+<2025-06-12T01:42:20.414Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [r_displayFrameGraph] is marked [Not Whitelisted] with a value of [0]; config file attempting to change to [1        ; micro-overlay con barras MT/GPU] - IGNORING
+<2025-06-12T01:42:20.414Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [r_enable_full_gpu_sync] is marked [Not Whitelisted] with a value of [0]; config file attempting to change to [0      ; evita sincronizar cada draw-call] - IGNORING
+<2025-06-12T01:42:20.414Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [r_HDRDisplayMaxNits] is marked [Not Whitelisted] with a value of [1500]; config file attempting to change to [750] - IGNORING
+<2025-06-12T01:42:20.414Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [r_GetScreenShot] is marked [Not Whitelisted] with a value of [0]; config file attempting to change to [1] - IGNORING
+<2025-06-12T01:42:24.988Z> [DataCore] Binary Data Loaded. Total Time took 4.142844s
+<2025-06-12T01:42:27.223Z> [DataCore] Game Post Load. Total Time took 2.234989s
+<2025-06-12T01:42:34.881Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [cl_fov] is marked [Not Whitelisted] with a value of [55]; config file attempting to change to [130        ; valores vÃ¡lidos 25-160] - IGNORING
+<2025-06-12T01:42:34.882Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [hud_hide] is marked [Not Whitelisted] with a value of [0]; config file attempting to change to [0       ; cambia a 1 para screenshots clean] - IGNORING
+<2025-06-12T01:42:36.384Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [g_tree_cut_reuse_dist] is marked [Not Whitelisted] with a value of [1024]; config file attempting to change to [0] as part of a cvar group - IGNORING
+<2025-06-12T01:42:36.384Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [r.Shadows.ScreenSpace.Quality] is marked [Not Whitelisted] with a value of [3]; config file attempting to change to [3] as part of a cvar group - IGNORING
+<2025-06-12T01:42:36.412Z> [GameProfiles]: Successfully activated profile 'default' for user 'Kaloz'
+<2025-06-12T01:42:36.412Z> username Kaloz signedIn 1 userIndex 4294967295
+<2025-06-12T01:42:36.412Z> ActivateProfile profileName default
+<2025-06-12T01:42:36.412Z> [Game Version]: RELEASE COMBO BUILD (CLIENT)
+<2025-06-12T01:42:36.470Z> [ContextSystem] disabling debug traces
+<2025-06-12T01:42:36.480Z> [Notice] <[FrontendController] LoadingFrontendConfig> [FrontendController][CFrontendController::LoadConfigFile] Loading [frontendconfig.xml] completed. [Team_ArenaCommanderFeature][Code][EA]
+<2025-06-12T01:42:36.482Z> [Notice] <[FrontendController] SavingFrontendConfig> [FrontendController][CFrontendController::SaveConfigFile] [Succeed] writing to [frontendconfig.xml] [Team_ArenaCommanderFeature][Code][EA]
+<2025-06-12T01:42:36.498Z> Found 9 audio input devices'
+<2025-06-12T01:42:36.511Z> Found audio input device: ID='{0.0.1.00000000}.{08f5c46d-3aab-436d-ad83-dd8ce414093d}' FriendlyName='Micrófono (Voicemod Virtual Audio Device (WDM))' state=0x00000002
+<2025-06-12T01:42:36.512Z> Found audio input device: ID='{0.0.1.00000000}.{2fa3d346-da64-48ae-95fe-7894a7d4b911}' FriendlyName='Micrófono de los auriculares con micrófono (4- Logitech USB Headset)' state=0x00000001
+<2025-06-12T01:42:36.512Z> Found audio input device: ID='{0.0.1.00000000}.{3ad6a907-3a81-4351-a60b-5ff49687a57f}' FriendlyName='Mezcla estéreo (Realtek High Definition Audio)' state=0x00000002
+<2025-06-12T01:42:36.513Z> Found audio input device: ID='{0.0.1.00000000}.{50ac9f2c-4aba-485e-ae35-7505e52f963a}' FriendlyName='VoiceMeeter Output (VB-Audio VoiceMeeter VAIO)' state=0x00000001
+<2025-06-12T01:42:36.514Z> Found audio input device: ID='{0.0.1.00000000}.{a3fe7271-f4ac-4d07-b692-e9094473ce19}' FriendlyName='Micrófono (Realtek High Definition Audio)' state=0x00000008
+<2025-06-12T01:42:36.514Z> Found audio input device: ID='{0.0.1.00000000}.{b2aadbc9-29dd-4415-86ed-96d3ad7d0d41}' FriendlyName='Micrófono (NVIDIA Broadcast)' state=0x00000001
+<2025-06-12T01:42:36.515Z> Found audio input device: ID='{0.0.1.00000000}.{cd8c1464-c99c-4a1d-9d86-984414572233}' FriendlyName='Línea de entrada (Realtek High Definition Audio)' state=0x00000008
+<2025-06-12T01:42:36.515Z> Found audio input device: ID='{0.0.1.00000000}.{e045ef89-8dfc-4e47-8ba6-67745dde62b9}' FriendlyName='Micrófono (Logitech BRIO)' state=0x00000001
+<2025-06-12T01:42:36.516Z> Found audio input device: ID='{0.0.1.00000000}.{f2acbacd-7741-4570-90d7-69d95c977638}' FriendlyName='VoiceMeeter Aux Output (VB-Audio VoiceMeeter AUX VAIO)' state=0x00000001
+<2025-06-12T01:42:36.516Z> CMicrophoneSelectionOptionBinding::SetChoicesAndValues() displaying 8 values. There are 9 devices
+<2025-06-12T01:42:36.586Z> [flow] <noname> : Failed to create node '2436' of type 'TestRunner:AutoTest:StartStop' - FLOWGRAPH DISCARDED
+<2025-06-12T01:42:36.586Z> [flow] <noname> : Did not load all nodes (15/17 nodes) - FLOWGRAPH DISCARDED
+<2025-06-12T01:42:36.587Z> [flow] <noname> : Failed to create node '2509' of type 'TestRunner:Misc:FrameTimer' - FLOWGRAPH DISCARDED
+<2025-06-12T01:42:36.587Z> [flow] <noname> : Did not load all nodes (2/7 nodes) - FLOWGRAPH DISCARDED
+<2025-06-12T01:42:37.088Z> SubsumptionManager::BuildSubsumptionXmlLibrary - Xml loaded from folder 'Scripts/AI/Subsumption/' in memory in 0.393675 seconds
+<2025-06-12T01:42:37.241Z> SubsumptionManager::BuildSubsumptionXmlLibrary - Xml loaded from folder 'Libs/Subsumption/' in memory in 0.540424 seconds
+<2025-06-12T01:42:38.335Z> [Notice] <Game Version> Game Version Identifier: 016e8c18-aba0a16a. GameVersion: 1. DataCore: 3322793223, ClassRegistry: 128993668, Archetypes: 32203888, Components: 3245793828, OC: 4267170697 [Team_EntitySystemTech][Initialization]
+<2025-06-12T01:42:38.349Z> {SET_CONNECTION_STATE} state [CONNECTING]
+<2025-06-12T01:42:38.821Z> {SET_CONNECTION_STATE} state [CONNECTED]
+<2025-06-12T01:42:38.821Z> [Notice] <InitiateLogin> Started. Game Version Identifier: 016e8c18-aba0a16a [Team_GameServices][Login]
+<2025-06-12T01:42:38.821Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.login.v1.LoginService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:38.944Z> PostInit StarAnimation
+<2025-06-12T01:42:39.322Z> [PSOCacheGen] PSOCache up to date (CL=9768350, SysSpec:4)
+<2025-06-12T01:42:39.390Z> {SET_ACCOUNT_STATE} state [kAccountLoginSuccess]
+<2025-06-12T01:42:39.391Z> [Notice] <AccountLoginCharacterStatus> Received a character status update message with the following characters: [Team_GameServices][Login]
+<2025-06-12T01:42:39.391Z> [Notice] <AccountLoginCharacterStatus_Character> Character: createdAt 1747662610454 - updatedAt 1747662611110 - geid 3563068139983 - accountId 1332951 - name GASCAV - state STATE_CURRENT [Team_GameServices][Login]
+<2025-06-12T01:42:39.391Z> [Notice] <LoginCompleted> LoginCompleted message [Team_GameServices][Login]
+<2025-06-12T01:42:39.391Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.identity.v1.IdentityService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:39.400Z> [FACEWARE] Selected camera: 1920x1080 30.00 fps - MJPG Logitech BRIO
+<2025-06-12T01:42:39.946Z> [FACEWARE] Capturing started successfully
+<2025-06-12T01:42:40.000Z> Final resolution: 2560x1440 (Borderless)
+<2025-06-12T01:42:40.018Z> Reallocating render resources with scale factor 1.00 (2560x1440)
+<2025-06-12T01:42:40.201Z> [Notice] <CreateChannel> Opening channel for 'sc.external.services.push.v1.PushService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:40.201Z>    grpc.primary_user_agent=grpc-c++/1.49.2
+<2025-06-12T01:42:40.201Z>    grpc.http2.max_pings_without_data=0
+<2025-06-12T01:42:40.202Z>    grpc.max_receive_message_length=16777216
+<2025-06-12T01:42:40.202Z>    grpc.max_send_message_length=4194304
+<2025-06-12T01:42:40.202Z>    grpc.keepalive_permit_without_calls=1
+<2025-06-12T01:42:40.202Z>    grpc.keepalive_time_ms=120000
+<2025-06-12T01:42:40.202Z>    grpc.keepalive_timeout_ms=20000
+<2025-06-12T01:42:40.202Z>    grpc.http2.min_time_between_pings_ms=10000
+<2025-06-12T01:42:40.202Z>    grpc.http2.min_ping_interval_without_data_ms=5000
+<2025-06-12T01:42:40.215Z> [Notice] <CDiffusionCryClient::OnLoginCompleted> Updated the JWT successfully [Team_GameServices][Login]
+<2025-06-12T01:42:40.215Z> [Notice] <CancelLogin> Started [Team_GameServices][Login]
+<2025-06-12T01:42:40.215Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.login.v1.LoginService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:40.215Z> [Notice] <CDiffusionCryClient::OnLoginCompleted> New login completed [Team_GameServices][Login]
+<2025-06-12T01:42:40.219Z> [Notice] <CDiffusionCryClient::UpdateFromStarNetwork> Legacy login started [Team_GameServices][Login]
+<2025-06-12T01:42:40.589Z> [Notice] <Legacy login response> [CIG-net] User Login Success - Handle[GASCAV] - Time[506781506] [Team_GameServices][Login]
+<2025-06-12T01:42:44.363Z> [CIG-net] [CIG-net] {READY} LoginQueue[0]
+<2025-06-12T01:42:44.363Z> [Notice] <Legacy login queue status> Legacy login success [Team_GameServices][Login]
+<2025-06-12T01:42:44.363Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.discipline.v1.DisciplineService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:44.364Z> [Notice] <EAC Login> Starting async login with token size: 1100 [Team_GameServices][AntiCheat]
+<2025-06-12T01:42:44.364Z> [Notice] <CDiffusionCryClient::UpdateFromStarNetwork> Both login completed [Team_GameServices][Login]
+<2025-06-12T01:42:44.402Z> [Notice] <SubscribeToPlayerSocial> Subscribing to player 3563068139983 social topics [Team_GameServices][Social]
+<2025-06-12T01:42:44.402Z> [Notice] <Update group cache> Start [Team_GameServices][Social]
+<2025-06-12T01:42:44.403Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.social.v1.SocialService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:44.403Z> [Notice] <NotifyPendingInvitations -> Start> Requesting pending invitation to notify player of it [Team_GameServices][Social]
+<2025-06-12T01:42:44.405Z> [CSessionManager::RequestFrontEnd] Started - RequestFrontEndReason="ProcessBootRequest"!
+<2025-06-12T01:42:44.405Z> Requesting game mode Frontend_Main/SC_Frontend
+<2025-06-12T01:42:44.406Z> Triggering level load (was NOT previously in megamap)
+<2025-06-12T01:42:44.406Z> [disconnectlight] Game does not exist!
+<2025-06-12T01:42:44.406Z> [CSessionManager::RequestFrontEnd] Restored!
+<2025-06-12T01:42:44.451Z> ============================ Loading level megamap ============================
+<2025-06-12T01:42:44.501Z> ============================ Loading level megamap ============================
+<2025-06-12T01:42:44.514Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [p_force_sync] is marked [Not Whitelisted] with a value of [1]; config file attempting to change to [1] - IGNORING
+<2025-06-12T01:42:44.514Z> [Notice] <Expect Incoming Connection> session=5629819dd1f87a301579acc092292fe5 node_id=00000000-0000-0000-0000-0000001456d7 nickname="GASCAV" playerGEID=3563068139983 [Team_Network][Network][Gateway]
+<2025-06-12T01:42:44.514Z> [Notice] <Nub ConnectTo> Connection requested to: <local>:12300 [Team_Network][Network][Gateway][Connection]
+<2025-06-12T01:42:44.515Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=0 newState=0 localState=0 remoteState=0 modelState=0 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.515Z> [Notice] <Channel Created> map="megamap" gamerules="SC_Frontend" remoteAddr=<local>:12300 localAddr=<local>:16 connection={1, 0} session=5629819dd1f87a301579acc092292fe5 node_id=00000000-0000-0000-0000-0000001456d7 nickname="GASCAV" playerGEID=3563068139983 uptime_secs=0.000772 [Team_Network][Network][Gateway]
+<2025-06-12T01:42:44.518Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=0 newState=0 localState=0 remoteState=0 modelState=0 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.519Z> [Notice] <Channel Created> map="megamap" gamerules="SC_Frontend" remoteAddr=<local>:16 localAddr=<local>:12300 connection={2, 0} session=5629819dd1f87a301579acc092292fe5 node_id=00000000-0000-0000-0000-0000001456d7 nickname="GASCAV" playerGEID=3563068139983 uptime_secs=0.000674 [Team_Network][Network][Gateway]
+<2025-06-12T01:42:44.529Z> [Notice] <Channel Connection Complete> map="megamap" gamerules="SC_Frontend" remoteAddr=<local>:16 localAddr=<local>:12300 connection={2, 0} session=5629819dd1f87a301579acc092292fe5 node_id=00000000-0000-0000-0000-0000001456d7 nickname="GASCAV" playerGEID=3563068139983 uptime_secs=0.011156 [Team_Network][Network][Gateway]
+<2025-06-12T01:42:44.549Z> [Notice] <Channel Connection Complete> map="megamap" gamerules="SC_Frontend" remoteAddr=<local>:12300 localAddr=<local>:16 connection={1, 0} session=5629819dd1f87a301579acc092292fe5 node_id=00000000-0000-0000-0000-0000001456d7 nickname="GASCAV" playerGEID=3563068139983 uptime_secs=0.035237 [Team_Network][Network][Gateway]
+<2025-06-12T01:42:44.551Z> [Notice] <CContextEstablisherStart> Starting 'CReplicationModel' Context Establisher [Team_Network][Network][Replication][Loading]
+<2025-06-12T01:42:44.552Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="CGameContext::m_currentState = EGameContextState::eEGS_NotRunning" state=eCVS_Initial(0) status="Finished" runningTime=0.000024 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.552Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="PauseGame" state=eCVS_Initial(0) status="Finished" runningTime=0.000017 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.552Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="WaitForPopups" state=eCVS_Initial(0) status="Finished" runningTime=0.000014 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.552Z> [CGlobalGameUI::OpenLoadingScreen] Started
+<2025-06-12T01:42:44.552Z> [CGlobalGameUI::OpenLoadingScreen] Request context transition to LoadingScreenView
+<2025-06-12T01:42:44.552Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="StartLoadingScreen" state=eCVS_Initial(0) status="Finished" runningTime=0.000136 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.553Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="DisableActionMap" state=eCVS_Initial(0) status="Finished" runningTime=0.000740 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.553Z> [Notice] <CContextEstablisherStart> Starting 'Network' Context Establisher [Team_Network][Network][Replication][Loading]
+<2025-06-12T01:42:44.553Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="WaitForConnectionEstablished" state=eCVS_Initial(0) status="Finished" runningTime=0.000004 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.553Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="ViewChangeState" state=eCVS_Initial(0) status="Finished" runningTime=0.000007 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.553Z> [Notice] <Context Establisher Blocked> establisher="Network" taskname="WaitClientPlayer" state=eCVS_WaitForAsyncSpawns(15) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.553Z> [Notice] <CContextEstablisherStart> Starting 'Network' Context Establisher [Team_Network][Network][Replication][Loading]
+<2025-06-12T01:42:44.553Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="WaitForConnectionEstablished" state=eCVS_Initial(0) status="Finished" runningTime=0.000003 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.553Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="OnNewConnection" state=eCVS_Initial(0) status="Finished" runningTime=0.000016 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.553Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="ViewChangeState" state=eCVS_Initial(0) status="Finished" runningTime=0.000004 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.553Z> [Notice] <Context Establisher Blocked> establisher="Network" taskname="Offline_EntitlePlayer" state=eCVS_Seeding(6) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.601Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=0 newState=1 localState=15 remoteState=0 modelState=0 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.601Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=0 newState=1 localState=6 remoteState=0 modelState=0 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.601Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_ResetEntitySystem(1) status="Finished" runningTime=0.047408 numRuns=2 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.601Z> [Notice] <BeginAsyncReset> CEntitySystem::BeginAsyncReset called! Set m_bResetting = true [Team_EntitySystemTech][Entity][EntitySystem]
+<2025-06-12T01:42:44.601Z> [Notice] <ResetEnd> CEntitySystem::UpdateReset - Ending Reset! [Team_EntitySystemTech][Entity][EntitySystem]
+<2025-06-12T01:42:44.650Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="EntitySystemReset" state=eCVS_ResetEntitySystem(1) status="Finished" runningTime=0.049747 numRuns=2 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.650Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=1 newState=2 localState=15 remoteState=0 modelState=1 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.650Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=1 newState=2 localState=6 remoteState=0 modelState=1 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.650Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_UnloadMap(2) status="Finished" runningTime=0.000103 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.650Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=2 newState=3 localState=15 remoteState=0 modelState=2 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.650Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=2 newState=3 localState=6 remoteState=0 modelState=2 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.650Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_ChangeServer(3) status="Finished" runningTime=0.000080 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.692Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="SubsystemsReset" state=eCVS_ChangeServer(3) status="Finished" runningTime=0.041993 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.693Z> [Notice] <Change Server Start> IsShardPersisted[1] IsServer[0] IsMultiplayer[0] [Team_Network][Network][Loading]
+<2025-06-12T01:42:44.693Z> [Notice] <Change Server End> IsShardPersisted[0] IsServer[1] IsMultiplayer[1] IsOnline[1] IsPersistedInEnvironment[1] IsPersistedInGameMode[0] [Team_Network][Network][Loading]
+<2025-06-12T01:42:44.693Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ChangeServer" state=eCVS_ChangeServer(3) status="Finished" runningTime=0.000124 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.693Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="SetLocalClientNetworkNodeId" state=eCVS_ChangeServer(3) status="Finished" runningTime=0.000006 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.695Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.identity.v1.IdentityService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:44.696Z> [Notice] <Update group cache> Success [Team_GameServices][Social]
+<2025-06-12T01:42:44.697Z> [CLoadingScreenComponent::Enter]
+<2025-06-12T01:42:44.743Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="FetchGlobalDynamicScopeIds" state=eCVS_ChangeServer(3) status="Finished" runningTime=0.050030 numRuns=2 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.743Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ResetTimer" state=eCVS_ChangeServer(3) status="Finished" runningTime=0.000022 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.743Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=3 newState=4 localState=15 remoteState=0 modelState=3 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.743Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=3 newState=4 localState=6 remoteState=0 modelState=3 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.743Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_ResetShard(4) status="Finished" runningTime=0.000092 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.743Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ConfigureSeedingData" state=eCVS_ResetShard(4) status="Finished" runningTime=0.000003 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.743Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="CCET_SetSeedingPhase" state=eCVS_ResetShard(4) status="Finished" runningTime=0.000003 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.743Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=4 newState=5 localState=15 remoteState=0 modelState=4 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.743Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=4 newState=5 localState=6 remoteState=0 modelState=4 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.743Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_LoadMap(5) status="Finished" runningTime=0.000085 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.744Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="CreateModelViews" state=eCVS_LoadMap(5) status="Finished" runningTime=0.000056 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.815Z> [Notice] <CContextEstablisherStart> Starting 'Game' Context Establisher [Team_Network][Network][Replication][Loading]
+<2025-06-12T01:42:44.816Z> [Notice] <ContextEstablisherTaskFinished> establisher="Game" message="CET completed" taskname="ViewChangeState" state=eCVS_Initial(0) status="Finished" runningTime=0.000007 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.816Z> [Notice] <Context Establisher Blocked> establisher="Game" taskname="BindRootUnstreamables" state=eCVS_ReplicateUniverseRoot(9) map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.816Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="CCET_InitEntityClassRegistry" state=eCVS_LoadMap(5) status="Finished" runningTime=0.071844 numRuns=2 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.816Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="CGameContext::m_currentState = EGameContextState::eEGS_Loading" state=eCVS_LoadMap(5) status="Finished" runningTime=0.000005 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.816Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="InitImmersiveness" state=eCVS_LoadMap(5) status="Finished" runningTime=0.000005 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.872Z> [Notice] <CDisciplineServiceExternal::OnLoginStatusChanged> Login status moved from NotLoggedIn to LoggedIn [Team_GameServices][AntiCheat]
+<2025-06-12T01:42:44.893Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="LoadLevel" state=eCVS_LoadMap(5) status="Finished" runningTime=0.077488 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.893Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=5 newState=6 localState=15 remoteState=0 modelState=5 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.894Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=5 newState=6 localState=6 remoteState=0 modelState=5 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.894Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_Seeding(6) status="Finished" runningTime=0.000104 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.894Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="CCET_SetSeedingPhase" state=eCVS_Seeding(6) status="Finished" runningTime=0.000004 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.894Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="SeedGlobalNameTables" state=eCVS_Seeding(6) status="Finished" runningTime=0.000017 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.894Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="WaitForGlobalNameTablesSeeding" state=eCVS_Seeding(6) status="Finished" runningTime=0.000012 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.894Z> [Notice] <CSeedingProcessor::SeedShard start> ShardId[local_shard], MegaMap[MegaMap.Frontend], GameMode[SC_Frontend] [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.894Z> [Notice] <SeedingProcessor::CreateShard> shardId[local_shard] [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.894Z> [Notice] <SeedingProcessor::CreateShard Success> Created shardId[local_shard], name[], status[1] [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.894Z> [Notice] <SeedingProcessor::ChangeShardStatusToSeeding> shardId[local_shard] [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.894Z> [Notice] <SeedingProcessor::ChangeShardStatusToSeeding Success> shardId[local_shard] [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.894Z> [Notice] <SeedingProcessor::SeedGameRulesAndMode> shardId[local_shard], GameMode[SC_Frontend], MegaMap[MegaMap.Frontend] [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.895Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="SeedShard" state=eCVS_Seeding(6) status="Finished" runningTime=0.001505 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.895Z> [Notice] <Context Establisher Unblocked> establisher="Network" taskname="Offline_EntitlePlayer" state=eCVS_Seeding(6) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.895Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="Offline_EntitlePlayer" state=eCVS_Seeding(6) status="Finished" runningTime=0.000003 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.895Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="ViewChangeState" state=eCVS_Seeding(6) status="Finished" runningTime=0.000007 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.895Z> [Notice] <Context Establisher Blocked> establisher="Network" taskname="SendOCHierarchyData" state=eCVS_Populate(7) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:44.898Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.rtc.v1.RTCService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:44.899Z> [Notice] <SeedingProcessor::SeedGameRulesAndMode Success> shardId[local_shard], GameMode[SC_Frontend], MegaMap[MegaMap.Frontend] [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.899Z> [Notice] <SeedingProcessor::SeedMegaMap> shardId[local_shard] [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.899Z> [Notice] <Seed Solar System> Seed Solar System Root 'objectcontainers/sm/fps_loadout.socpak' in Solar System 'DefaultSolarSystem' for shard local_shard [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.919Z> [Notice] <Seed Solar System Success> Seed Solar System 'DefaultSolarSystem' for shard local_shard [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.919Z> [Notice] <SeedingProcessor::SeedMegaMap Success> shardId[local_shard] [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.919Z> [Notice] <SeedingProcessor::ActivateShard> shardId[local_shard] [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.919Z> [Notice] <SeedingProcessor::ActivateShard Success> shardId[local_shard] [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.919Z> [Notice] <ShardSeeding Success> ShardId[local_shard], ShardName[], ShardStatus[3], MegaMap[MegaMap.Frontend], GameMode[SC_Frontend] [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.919Z> [Notice] <CSeedingProcessor::SeedShard Success> ShardId[local_shard] [Team_OnlineTech][EntityGraph][Seeding][Services]
+<2025-06-12T01:42:44.923Z> [Notice] <AsyncLoginCallback> Login completed [Team_GameServices][AntiCheat]
+<2025-06-12T01:42:45.021Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="WaitForShardSeeding" state=eCVS_Seeding(6) status="Finished" runningTime=0.126084 numRuns=3 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.021Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=6 newState=7 localState=15 remoteState=0 modelState=6 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.021Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=6 newState=7 localState=7 remoteState=0 modelState=6 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.021Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_Populate(7) status="Finished" runningTime=0.000102 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.021Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ConnectToMesh" state=eCVS_Populate(7) status="Finished" runningTime=0.000003 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.021Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="CCET_SetSeedingPhase" state=eCVS_Populate(7) status="Finished" runningTime=0.000004 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.021Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="GetOrAcquireShardInfo" state=eCVS_Populate(7) status="Finished" runningTime=0.000003 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.021Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="WaitForGetShardInfo" state=eCVS_Populate(7) status="Finished" runningTime=0.000022 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.023Z> [Notice] <Context Establisher Unblocked> establisher="Network" taskname="SendOCHierarchyData" state=eCVS_Populate(7) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.023Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="SendOCHierarchyData" state=eCVS_Populate(7) status="Finished" runningTime=0.000004 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.023Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="ViewChangeState" state=eCVS_Populate(7) status="Finished" runningTime=0.000009 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.023Z> [Notice] <Context Establisher Blocked> establisher="Network" taskname="InitializeSpawnData" state=eCVS_ReadyToStream(12) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.071Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="RequestAndWaitForOCHierarchyData" state=eCVS_Populate(7) status="Finished" runningTime=0.049488 numRuns=2 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.072Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="RegisterOCHierarchyData" state=eCVS_Populate(7) status="Finished" runningTime=0.001149 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.072Z> [Notice] <RegisterUniverseHierarchy_Begin> bNetRecvd="0" nodeCount="1" [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.074Z> [Notice] <RegisterUniverseHierarchy_Mid>  [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.074Z> [Notice] <RegisterUniverseHierarchy_End>  [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.074Z> [Notice] <RegisterUniverseHierarchy_Begin> bNetRecvd="0" nodeCount="1" [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.074Z> [Notice] <RegisterUniverseHierarchy_Mid>  [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.074Z> [Notice] <RegisterUniverseHierarchy_End>  [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.074Z> [Notice] <RegisterUniverseHierarchy_Begin> bNetRecvd="0" nodeCount="1" [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.074Z> [Notice] <RegisterUniverseHierarchy_Mid>  [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.074Z> [Notice] <RegisterUniverseHierarchy_End>  [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.074Z> [Notice] <RegisterUniverseHierarchy_Begin> bNetRecvd="0" nodeCount="1" [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.075Z> [Notice] <RegisterUniverseHierarchy_Mid>  [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.075Z> [Notice] <RegisterUniverseHierarchy_End>  [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.075Z> [Notice] <RegisterUniverseHierarchy_Begin> bNetRecvd="0" nodeCount="1" [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.075Z> [Notice] <RegisterUniverseHierarchy_Mid>  [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.075Z> [Notice] <RegisterUniverseHierarchy_End>  [Team_EntitySystemTech][SolarSystem][Loading][Persistence]
+<2025-06-12T01:42:45.121Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="WaitForOCHierarchyDataRegistration" state=eCVS_Populate(7) status="Finished" runningTime=0.048687 numRuns=2 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.122Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=7 newState=8 localState=15 remoteState=0 modelState=7 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.122Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=7 newState=8 localState=12 remoteState=0 modelState=7 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.122Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_ReadyToReplicate(8) status="Finished" runningTime=0.000102 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.122Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="SetupTerritories" state=eCVS_ReadyToReplicate(8) status="Finished" runningTime=0.000035 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.122Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=8 newState=9 localState=15 remoteState=0 modelState=8 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.122Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=8 newState=9 localState=12 remoteState=0 modelState=8 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.122Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_ReplicateUniverseRoot(9) status="Finished" runningTime=0.000080 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.172Z> [Notice] <Context Establisher Unblocked> establisher="Game" taskname="BindRootUnstreamables" state=eCVS_ReplicateUniverseRoot(9) map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.172Z> [Notice] <ContextEstablisherTaskFinished> establisher="Game" message="CET completed" taskname="BindRootUnstreamables" state=eCVS_ReplicateUniverseRoot(9) status="Finished" runningTime=0.000255 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.172Z> [Notice] <ContextEstablisherTaskFinished> establisher="Game" message="CET completed" taskname="ViewChangeState" state=eCVS_ReplicateUniverseRoot(9) status="Finished" runningTime=0.000007 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.172Z> [Notice] <Context Establisher Blocked> establisher="Game" taskname="BindSolarSystemRoot" state=eCVS_ReplicateSolarSystem(10) map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.241Z> Loading GameModeRecord='SC_Frontend' with EGameModeId='SC_Frontend'
+<2025-06-12T01:42:45.326Z> CMicrophoneSelectionOptionBinding::SetChoicesAndValues() displaying 8 values. There are 9 devices
+<2025-06-12T01:42:45.327Z> [Notice] <[GameRules] GameRulesActionEvent_GameModeCreated> [GameRules][CGameRules::OnActionEvent] Game mode created [Team_ArenaCommanderFeature][Code][Gamerules]
+<2025-06-12T01:42:45.373Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="WaitForGameRules" state=eCVS_ReplicateUniverseRoot(9) status="Finished" runningTime=0.250632 numRuns=6 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.373Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=9 newState=10 localState=15 remoteState=0 modelState=9 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.373Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=9 newState=10 localState=12 remoteState=0 modelState=9 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.373Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_ReplicateSolarSystem(10) status="Finished" runningTime=0.000099 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.373Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="WaitForSolarSystem" state=eCVS_ReplicateSolarSystem(10) status="Finished" runningTime=0.000006 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.422Z> [Notice] <Context Establisher Unblocked> establisher="Game" taskname="BindSolarSystemRoot" state=eCVS_ReplicateSolarSystem(10) map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.422Z> [Notice] <ContextEstablisherTaskFinished> establisher="Game" message="CET completed" taskname="BindSolarSystemRoot" state=eCVS_ReplicateSolarSystem(10) status="Finished" runningTime=0.000080 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.422Z> [Notice] <ContextEstablisherTaskFinished> establisher="Game" message="CET completed" taskname="ViewChangeState" state=eCVS_ReplicateSolarSystem(10) status="Finished" runningTime=0.000006 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.422Z> [Notice] <Context Establisher Blocked> establisher="Game" taskname="BindSolarSystemUnstreamables" state=eCVS_ReplicateUnstreamables(11) map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.422Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=10 newState=11 localState=15 remoteState=0 modelState=10 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.422Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=10 newState=11 localState=12 remoteState=0 modelState=10 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.422Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_ReplicateUnstreamables(11) status="Finished" runningTime=0.048982 numRuns=2 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.422Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="CacheSolarSystemStreamingGroupRoots" state=eCVS_ReplicateUnstreamables(11) status="Finished" runningTime=0.000006 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.472Z> [Notice] <Context Establisher Unblocked> establisher="Game" taskname="BindSolarSystemUnstreamables" state=eCVS_ReplicateUnstreamables(11) map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.472Z> [Notice] <ContextEstablisherTaskFinished> establisher="Game" message="CET completed" taskname="BindSolarSystemUnstreamables" state=eCVS_ReplicateUnstreamables(11) status="Finished" runningTime=0.000102 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.472Z> [Notice] <ContextEstablisherTaskFinished> establisher="Game" message="CET completed" taskname="ViewChangeState" state=eCVS_ReplicateUnstreamables(11) status="Finished" runningTime=0.000006 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.472Z> [Notice] <Context Establisher Blocked> establisher="Game" taskname="CreatePlayerStreamingBubble" state=eCVS_UnstowPlayer(13) map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.472Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=11 newState=12 localState=15 remoteState=0 modelState=11 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.472Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=11 newState=12 localState=12 remoteState=0 modelState=11 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.472Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_ReadyToStream(12) status="Finished" runningTime=0.049960 numRuns=2 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.472Z> [CSessionManager::OnClientConnected] Connected!
+<2025-06-12T01:42:45.472Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="EstablishedContext" state=eCVS_ReadyToStream(12) status="Finished" runningTime=0.000025 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.472Z> [Notice] <Context Establisher Unblocked> establisher="Network" taskname="InitializeSpawnData" state=eCVS_ReadyToStream(12) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.472Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="InitializeSpawnData" state=eCVS_ReadyToStream(12) status="Finished" runningTime=0.000004 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.472Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="Offline_WaitForEntitlePlayer" state=eCVS_ReadyToStream(12) status="Finished" runningTime=0.000002 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.473Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.entitygraph.v1.EntityGraphService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:45.473Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="QueryPlayerData" state=eCVS_ReadyToStream(12) status="Finished" runningTime=0.001036 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.822Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="WaitForQueryPlayerData" state=eCVS_ReadyToStream(12) status="Finished" runningTime=0.348261 numRuns=8 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.822Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="ViewChangeState" state=eCVS_ReadyToStream(12) status="Finished" runningTime=0.000015 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.822Z> [Notice] <Context Establisher Blocked> establisher="Network" taskname="WaitForGameRulesPlayerSetup" state=eCVS_UnstowPlayer(13) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.871Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=12 newState=13 localState=15 remoteState=0 modelState=12 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.871Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=12 newState=13 localState=13 remoteState=0 modelState=12 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.871Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.399581 numRuns=9 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.871Z> [Notice] <Context Establisher Unblocked> establisher="Network" taskname="WaitForGameRulesPlayerSetup" state=eCVS_UnstowPlayer(13) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.871Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="WaitForGameRulesPlayerSetup" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.000034 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.871Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="SetLocalPlayerId" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.000005 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.872Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="RequestPlayerVariables" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.000004 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.872Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="WaitForVariables" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.000004 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.872Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="GetVehiclePersistentData" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.000002 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.872Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="WaitForVehiclePersistentData" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.000003 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.872Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="WaitForAsyncSpawns" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.000003 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.872Z> [Notice] <ResolveSpawnLocation Location Not Found> Could not resolve initial spawn location from spawning module for player id: [3563068139983], setting spawn zone location zonehost to solar system fallback [Team_BackendServices][Services]
+<2025-06-12T01:42:45.872Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="ResolveSpawnLocation" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.000069 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.872Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="CreateStreamingBubble" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.000004 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.872Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="UnstowPlayerVehicle" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.000003 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.872Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="UnstowPlayer" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.000003 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.921Z> [Notice] <Context Establisher Unblocked> establisher="Game" taskname="CreatePlayerStreamingBubble" state=eCVS_UnstowPlayer(13) map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.972Z> [Notice] <ContextEstablisherTaskFinished> establisher="Game" message="CET completed" taskname="CreatePlayerStreamingBubble" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.049974 numRuns=2 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.972Z> [Notice] <Context Establisher Blocked> establisher="Game" taskname="BindAlwaysStreamedInEntities" state=eCVS_ReplicateStreamables(14) map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.972Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="SpawnPlayer_NoShardPersistence" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.099473 numRuns=3 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.972Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="ViewChangeState" state=eCVS_UnstowPlayer(13) status="Finished" runningTime=0.000013 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:45.972Z> [Notice] <Context Establisher Blocked> establisher="Network" taskname="WaitForPlayerSpawnAndValidate" state=eCVS_WaitForAsyncSpawns(15) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.022Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=13 newState=14 localState=15 remoteState=0 modelState=13 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.022Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=13 newState=14 localState=15 remoteState=0 modelState=13 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.022Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_ReplicateStreamables(14) status="Finished" runningTime=0.149952 numRuns=4 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.072Z> [Notice] <Context Establisher Unblocked> establisher="Game" taskname="BindAlwaysStreamedInEntities" state=eCVS_ReplicateStreamables(14) map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.072Z> [Notice] <ContextEstablisherTaskFinished> establisher="Game" message="CET completed" taskname="BindAlwaysStreamedInEntities" state=eCVS_ReplicateStreamables(14) status="Finished" runningTime=0.000050 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.072Z> [Notice] <ContextEstablisherTaskFinished> establisher="Game" message="CET completed" taskname="BindAllStreamableEntities" state=eCVS_ReplicateStreamables(14) status="Finished" runningTime=0.000451 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.072Z> [Notice] <ContextEstablisherTaskFinished> establisher="Game" message="CET completed" taskname="ViewChangeState" state=eCVS_ReplicateStreamables(14) status="Finished" runningTime=0.000008 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.072Z> [Notice] <Context Establisher Blocked> establisher="Game" taskname="GrantPlayerOwnedTokens" state=eCVS_WaitForAsyncSpawns(15) map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.072Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=14 newState=15 localState=15 remoteState=0 modelState=14 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.072Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=14 newState=15 localState=15 remoteState=0 modelState=14 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.072Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_WaitForAsyncSpawns(15) status="Finished" runningTime=0.050722 numRuns=2 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.073Z> [Notice] <Context Establisher Unblocked> establisher="Network" taskname="WaitClientPlayer" state=eCVS_WaitForAsyncSpawns(15) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.073Z> [Notice] <Context Establisher Unblocked> establisher="Network" taskname="WaitForPlayerSpawnAndValidate" state=eCVS_WaitForAsyncSpawns(15) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:46.122Z> [Notice] <Context Establisher Unblocked> establisher="Game" taskname="GrantPlayerOwnedTokens" state=eCVS_WaitForAsyncSpawns(15) map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.271Z> [Notice] <ContextEstablisherTaskFinished> establisher="Game" message="CET completed" taskname="GrantPlayerOwnedTokens" state=eCVS_WaitForAsyncSpawns(15) status="Finished" runningTime=3.150006 numRuns=64 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.271Z> [Notice] <Context Establisher Done> establisher="Game" runningTime=4.455793 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.527Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.ledger.v1.LedgerService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:49.601Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.entity_document.v1.ExternalEntityDocumentService' to endpoint dns:///pub-sc-alpha-411-9759283.test1.cloudimperiumgames.com:443 (transport security: 1) [Team_OnlineTech][gRPC]
+<2025-06-12T01:42:49.623Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[body_01_noMagicPocket_200000000231, body_01_noMagicPocket, 200000000231] Status[persistent] Port[Body_ItemPort] Elapsed[59.712368] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.623Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[rsi_odyssey_undersuit_01_01_01_200000000232, rsi_odyssey_undersuit_01_01_01, 200000000232] Status[persistent] Port[Armor_Undersuit] Elapsed[59.712521] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.623Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[rsi_odyssey_undersuit_helmet_01_01_01_200000000233, rsi_odyssey_undersuit_helmet_01_01_01, 200000000233] Status[persistent] Port[Armor_Helmet] Elapsed[59.712574] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.623Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[crlf_consumable_healing_01_200000000234, crlf_consumable_healing_01, 200000000234] Status[persistent] Port[medPen_attach_1] Elapsed[59.712612] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.623Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[klwe_pistol_energy_01_mag_200000000236, klwe_pistol_energy_01_mag, 200000000236] Status[persistent] Port[magazine_attach_1] Elapsed[59.712654] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.623Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[klwe_pistol_energy_01_200000000235, klwe_pistol_energy_01, 200000000235] Status[persistent] Port[wep_sidearm] Elapsed[59.712696] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.623Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[klwe_pistol_energy_01_mag_200000000248, klwe_pistol_energy_01_mag, 200000000248] Status[persistent] Port[magazine_attach] Elapsed[59.712730] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.623Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[PU_Protos_Head_200000000240, PU_Protos_Head, 200000000240] Status[persistent] Port[Head_ItemPort] Elapsed[59.712765] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.623Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[Head_Teeth_200000000241, Head_Teeth, 200000000241] Status[persistent] Port[Teeth_ItemPort] Elapsed[59.712799] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.623Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[Shared_Scalp_Unified_200000000249, Shared_Scalp_Unified, 200000000249] Status[persistent] Port[Universal_Scalp_ItemPort] Elapsed[59.712833] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.623Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[brows_001_200000000247, brows_001, 200000000247] Status[persistent] Port[Eyebrow_ItemPort] Elapsed[59.712864] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.623Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[Head_Eyelashes_200000000245, Head_Eyelashes, 200000000245] Status[persistent] Port[Eyelashes_ItemPort] Elapsed[59.712894] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.624Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[Head_Eyedetail_200000000246, Head_Eyedetail, 200000000246] Status[persistent] Port[Eyedetail_ItemPort] Elapsed[59.712929] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.624Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[Head_Eyes_Brown_03_200000000242, Head_Eyes_Brown_03, 200000000242] Status[persistent] Port[Eyes_ItemPort] Elapsed[59.712959] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.624Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[Default_LensDisplay_PU_200000000243, Default_LensDisplay_PU, 200000000243] Status[persistent] Port[Lens_ItemPort] Elapsed[59.712994] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.624Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[FPS_DefaultRadar_Lens_200000000250, FPS_DefaultRadar_Lens, 200000000250] Status[persistent] Port[radar] Elapsed[59.713039] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.624Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[bald_hair_01_200000000244, bald_hair_01, 200000000244] Status[persistent] Port[Hair_ItemPort] Elapsed[59.713074] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.624Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[MobiGlas_200000000237, MobiGlas, 200000000237] Status[persistent] Port[mobiglas_attach] Elapsed[59.713108] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.624Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[PersonalMobiGlas_PU_200000000238, PersonalMobiGlas_PU, 200000000238] Status[persistent] Port[mobiglas_screen_attach] Elapsed[59.713142] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.624Z> [Notice] <AttachmentReceived> Player[GASCAV] Attachment[LegacyMobiGlas_200000000239, LegacyMobiGlas, 200000000239] Status[persistent] Port[legacy_mobiglas_screen_attach] Elapsed[59.713177] [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.629Z> [CSessionManager::OnClientSpawned] Spawned!
+<2025-06-12T01:42:49.629Z> [Error] <ReplicatedCreationBatchNoCallback> Replicated entity creation batch CFrontendController::RequestOpenPromptView has no supplied callback. Creation batches can fail, and they should be used with this in mind, you should re-try or handle the failure in a callback. [Team_UITech][Creation][Entity][TechDebt]
+<2025-06-12T01:42:49.640Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="WaitForAsyncSpawns" state=eCVS_WaitForAsyncSpawns(15) status="Finished" runningTime=3.568092 numRuns=71 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.640Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="WaitClientPlayer" state=eCVS_WaitForAsyncSpawns(15) status="Finished" runningTime=3.568160 numRuns=71 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.640Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="WaitClientActor" state=eCVS_WaitForAsyncSpawns(15) status="Finished" runningTime=0.000004 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.640Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="ViewChangeState" state=eCVS_WaitForAsyncSpawns(15) status="Finished" runningTime=0.000006 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.640Z> [Notice] <Context Establisher Blocked> establisher="Network" taskname="InitActionMap.ClientPlayer" state=eCVS_InGame(16) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.640Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="WaitForPlayerSpawnAndValidate" state=eCVS_WaitForAsyncSpawns(15) status="Finished" runningTime=3.568308 numRuns=71 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.641Z> [Notice] <OnClientConnected> Player[GASCAV] has connected. [Team_ActorFeatures][Inventory]
+<2025-06-12T01:42:49.641Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="OnClientConnect" state=eCVS_WaitForAsyncSpawns(15) status="Finished" runningTime=0.000190 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.641Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="ViewChangeState" state=eCVS_WaitForAsyncSpawns(15) status="Finished" runningTime=0.000006 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.641Z> [Notice] <Context Establisher Blocked> establisher="Network" taskname="OnClientEnteredGame" state=eCVS_InGame(16) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.645Z> [Notice] <CSubsumptionMissionComponent::Initialize> [MISSION] Spawned mission module EntityId 200000000251 [Team_MissionFeatures][Missions]
+<2025-06-12T01:42:49.646Z> [Notice] <CSubsumptionMissionComponent::CreateMissionInstance> [MISSION] Creating subsumption mission module Libs/Subsumption/Missions/EA/FrontendHangar.xml with seed 819932826 and EntityId 200000000251 [Team_MissionFeatures][Missions]
+<2025-06-12T01:42:49.753Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=15 newState=16 localState=16 remoteState=0 modelState=15 ViewName="Replicant <local>:12300" connection={1, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.753Z> [Notice] <ContextEstablisher Model Change State> The Model is changing state meaning views must update their model state. oldState=15 newState=16 localState=16 remoteState=0 modelState=15 ViewName="GameClient <local>:16" connection={2, 0} node_id=00000000-0000-0000-0000-0000001456d7 playerGEID=3563068139983 sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.753Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ModelWaitForViews" state=eCVS_InGame(16) status="Finished" runningTime=0.112758 numRuns=2 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.762Z> Level load completed
+<2025-06-12T01:42:49.763Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="LoadingComplete" state=eCVS_InGame(16) status="Finished" runningTime=0.009616 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.763Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="CGameContext::m_currentState = EGameContextState::eEGS_Starting" state=eCVS_InGame(16) status="Finished" runningTime=0.000006 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.763Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="ResumeGame" state=eCVS_InGame(16) status="Finished" runningTime=0.000023 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.763Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="CGameContext::m_currentState = EGameContextState::eEGS_Running" state=eCVS_InGame(16) status="Finished" runningTime=0.000003 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.763Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="InGame" state=eCVS_InGame(16) status="Finished" runningTime=0.000031 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.763Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="WaitForTutorialMission" state=eCVS_InGame(16) status="Finished" runningTime=0.000007 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.763Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="WaitForGameRulesSpawningModule" state=eCVS_InGame(16) status="Finished" runningTime=0.000004 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.763Z> Loading screen for Frontend_Main : SC_Frontend closed after 5.21 seconds
+<2025-06-12T01:42:49.763Z> [Notice] <ContextEstablisherTaskFinished> establisher="CReplicationModel" message="CET completed" taskname="StopLoadingScreen" state=eCVS_InGame(16) status="Finished" runningTime=0.000059 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.763Z> [Notice] <Context Establisher Done> establisher="CReplicationModel" runningTime=5.211236 map="megamap" gamerules="SC_Frontend" sessionId="c87544f3-b6a0-4849-b857-39d7c24663bd" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.763Z> [Notice] <Context Establisher Unblocked> establisher="Network" taskname="InitActionMap.ClientPlayer" state=eCVS_InGame(16) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.763Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="InitActionMap.ClientPlayer" state=eCVS_InGame(16) status="Finished" runningTime=0.000016 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.764Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="InitView.ClientPlayer" state=eCVS_InGame(16) status="Finished" runningTime=0.000513 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.764Z> [Notice] <Context Establisher Done> establisher="Network" runningTime=5.210195 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.764Z> [Notice] <Context Establisher Unblocked> establisher="Network" taskname="OnClientEnteredGame" state=eCVS_InGame(16) map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.764Z> [Notice] <ContextEstablisherTaskFinished> establisher="Network" message="CET completed" taskname="OnClientEnteredGame" state=eCVS_InGame(16) status="Finished" runningTime=0.000013 numRuns=1 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.764Z> [Notice] <Context Establisher Done> establisher="Network" runningTime=5.210625 map="megamap" gamerules="SC_Frontend" sessionId="5629819dd1f87a301579acc092292fe5" [Team_Network][Network][Replication][Loading][Persistence]
+<2025-06-12T01:42:49.987Z> Headless Client: Destinations update received: '2'
+<2025-06-12T01:42:49.987Z> [Notice] <CEntityComponentFrontendPUUIProvider::AddAccessibleDestinations> [2] destinations received for player [GASCAV] [Team_OnlineTech][Team_OnlineTech]
+<2025-06-12T01:42:50.068Z> [Notice] <[EALobby] EALobbyQuit> [EALobby][CEALobby::RequestQuitLobby] GASCAV Requesting QuitLobby bHost[0] currentNetworkType[NONE][0] remakeNetworkType[NONE][0] [Team_ArenaCommanderFeature][Code][EA]
+<2025-06-12T01:42:50.252Z> [Notice] <CEntityComponentFrontendPUUIProvider::AddAccessibleDestinations> [2] destinations received for player [GASCAV] [Team_OnlineTech][Team_OnlineTech]
+<2025-06-12T01:43:34.110Z> PHYSICS INSTANCE STATS BEGIN 1
+<2025-06-12T01:43:34.111Z>   entities:       21 allocated:     8192, reallocs :        1, deletion queue :        0(stalled :        0)
+<2025-06-12T01:43:34.111Z>   instances:        0 size:      288 bytes type: CPhysicalPlaceholder
+<2025-06-12T01:43:34.111Z>   instances:    65540 size:      960 bytes type: CPhysicalEntity
+<2025-06-12T01:43:34.111Z>   instances:        1 size:     2944 bytes type: CActorEntity
+<2025-06-12T01:43:34.111Z>   instances:        0 size:     1216 bytes type: CParticleEntity
+<2025-06-12T01:43:34.111Z>   instances:        0 size:     1664 bytes type: CRopeEntity
+<2025-06-12T01:43:34.111Z>   instances:        0 size:     1472 bytes type: CRopeEntityEx
+<2025-06-12T01:43:34.111Z>   instances:        0 size:     1408 bytes type: CSoftEntity
+<2025-06-12T01:43:34.111Z>   instances:        0 size:     1408 bytes type: CSoftEntityEx
+<2025-06-12T01:43:34.111Z>   instances:       15 size:     2624 bytes type: CRigidEntity
+<2025-06-12T01:43:34.111Z>   instances:        1 size:     3392 bytes type: CArticulatedEntity
+<2025-06-12T01:43:34.111Z>   instances:        0 size:    48384 bytes type: CWheeledVehicleEntity
+<2025-06-12T01:43:34.111Z>   instances:        0 size:    28096 bytes type: CSpaceshipEntity
+<2025-06-12T01:43:34.111Z>   instances:        0 size:     2880 bytes type: CHoverEntity
+<2025-06-12T01:43:34.111Z>   instances:        0 size:     1664 bytes type: CPhysPlanetEntity
+<2025-06-12T01:43:34.111Z>   instances:        3 size:     1728 bytes type: CPhysArea
+<2025-06-12T01:43:34.111Z>   instances:       35 size:      144 bytes type: CBoxGeom
+<2025-06-12T01:43:34.111Z>   instances:       10 size:      160 bytes type: CSphereGeom
+<2025-06-12T01:43:34.111Z>   instances:       67 size:      176 bytes type: CCapsuleGeom
+<2025-06-12T01:43:34.111Z>   instances:       68 size:      176 bytes type: CCylinderGeom
+<2025-06-12T01:43:34.111Z>   instances:        3 size:      544 bytes type: CEntityGrid
+<2025-06-12T01:43:34.111Z>   instances:       11 size:      664 bytes type: CTriMesh
+<2025-06-12T01:43:34.111Z>   instances:        0 size:       64 bytes type: CDistanceFieldGeom
+<2025-06-12T01:43:34.111Z>   instances:        0 size:       64 bytes type: CBitVoxelGeom
+<2025-06-12T01:43:34.111Z>   instances:        5 size:      408 bytes type: single_part_t
+<2025-06-12T01:43:34.111Z>   instances:        5 size:       88 bytes type: single_part_instance_t
+<2025-06-12T01:43:34.111Z>   instances:       14 size:      416 bytes type: container_t
+<2025-06-12T01:43:34.111Z>   instances:    65560 size:      128 bytes type: container_instance_t
+<2025-06-12T01:43:34.111Z>   instances:        0 size:      688 bytes type: COrderedMesh
+<2025-06-12T01:43:34.111Z> total size of part container memory chunks: 38976 bytes
+<2025-06-12T01:43:34.111Z> total size of part container instance memory chunks: 7568 bytes
+<2025-06-12T01:43:34.111Z> PHYSICS INSTANCE STATS END
+<2025-06-12T01:46:25.224Z> [Notice] <SystemQuit> CSystem::Quit invoked with - cause=30016, reason=Quit via console command, exitCode=0, thread id=12564, main thread id=12564 [Team_Unknown][System]
+<2025-06-12T01:46:25.224Z> System Fast Shutdown (ExitOnQuit enabled)
+<2025-06-12T01:46:25.893Z> BaseInput - Shutting down all force feedback
+<2025-06-12T01:46:25.893Z> ActionGame - Shutting down all force feedback
+<2025-06-12T01:46:25.893Z> [CIG] CCIGBroker::FastShutdown
