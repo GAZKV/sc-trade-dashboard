@@ -28,6 +28,30 @@ function saveShopName(id, name) {
   if (lastData) updateDashboard(lastData);
 }
 
+function enableEdit(cell, idValue, currentName, saveFn) {
+  cell.ondblclick = () => {
+    cell.innerHTML = "";
+    const input = document.createElement("input");
+    input.type = "text";
+    input.placeholder = idValue;
+    input.value = currentName || "";
+    const btn = document.createElement("button");
+    btn.textContent = "Apply";
+    btn.onclick = () => {
+      const val = input.value.trim();
+      if (val && val !== currentName && val !== idValue) {
+        saveFn(idValue, val);
+      } else {
+        cell.textContent = currentName || idValue;
+        enableEdit(cell, idValue, currentName, saveFn);
+      }
+    };
+    cell.appendChild(input);
+    cell.appendChild(btn);
+    input.focus();
+  };
+}
+
 function updateDashboard(data) {
   lastData = data;
   if (!data.kpi) return; // bootstrap state
@@ -102,6 +126,7 @@ function populateTable(id, rows) {
         const mapped = resourceNames[v];
         if (mapped) {
           cell.textContent = mapped;
+          enableEdit(cell, v, mapped, saveResourceName);
         } else if (id === "pendingTable") {
           const input = document.createElement("input");
           input.type = "text";
@@ -113,11 +138,13 @@ function populateTable(id, rows) {
           cell.appendChild(btn);
         } else {
           cell.textContent = v;
+          enableEdit(cell, v, "", saveResourceName);
         }
       } else if (key === "shopId") {
         const mapped = shopNames[v];
         if (mapped) {
           cell.textContent = mapped;
+          enableEdit(cell, v, mapped, saveShopName);
         } else if (id === "lastTransTable") {
           const input = document.createElement("input");
           input.type = "text";
@@ -129,6 +156,7 @@ function populateTable(id, rows) {
           cell.appendChild(btn);
         } else {
           cell.textContent = v;
+          enableEdit(cell, v, "", saveShopName);
         }
       } else {
         cell.textContent =
