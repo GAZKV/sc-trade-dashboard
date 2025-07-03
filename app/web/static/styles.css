@@ -50,3 +50,27 @@ header { display: flex; justify-content: space-between; align-items: baseline; }
 .data-table tr:hover {
   background-color: rgba(88, 166, 255, 0.1);
 }
+
+/* Pending Inventory input boxes and Apply buttons */
+#pendingTable input[type="text"] {
+  background: #161b22;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin-right: 0.25rem;
+}
+
+#pendingTable button {
+  background: #238636;
+  color: #e6edf3;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-left: 0.25rem;
+  cursor: pointer;
+}
+
+#pendingTable button:hover {
+  background: #2ea043;
+}
