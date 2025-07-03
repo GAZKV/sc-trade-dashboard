@@ -2,15 +2,9 @@ from __future__ import annotations
 
 from datetime import datetime
 from decimal import Decimal
-from pathlib import Path
 from typing import Dict, List
 
 import pandas as pd
-import matplotlib.pyplot as plt
-import matplotlib.dates as mdates
-
-# If you need the base64 helper for images
-from .report import fig_to_b64
 
 
 __all__ = ["analyse"]
