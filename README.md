@@ -12,8 +12,9 @@ pip install -r requirements.txt
 ```
 
 2. Run the API locally
+Set the `LOG_ROOT` environment variable to your Star Citizen installation path:
 ```bash
-uvicorn app.web.main:app --reload
+LOG_ROOT="/path/to/StarCitizen/LIVE" uvicorn app.web.main:app --reload
 ```
 
 3. Generate an HTML report from logs
