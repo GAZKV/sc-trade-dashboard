@@ -56,22 +56,43 @@ def _best_routes(buys: pd.DataFrame, sells: pd.DataFrame, top_n: int = 5) -> pd.
 
 
 def _pending_inventory(buys: pd.DataFrame, sells: pd.DataFrame) -> pd.DataFrame:
-    """Return quantity and cost of goods not yet sold."""
+    """Return quantity and estimated value of goods not yet sold."""
     if buys.empty:
         return pd.DataFrame()
 
+    # Stats from buys: quantity purchased, spend and max unit price
     buy_stats = buys.groupby("resourceGUID").agg(
-        bought_qty=("quantity", "sum"), spent_sc=("price", "sum")
+        bought_qty=("quantity", "sum"),
+        spent_sc=("price", "sum"),
+        maxPriceperCentiSCU=("shopPricePerCentiSCU", "max"),
     )
+
+    # How much of each resource has been sold
     sell_stats = sells.groupby("resourceGUID").agg(sold_qty=("quantity", "sum"))
+
+    # For suggested shopId, find shop with highest sell price per unit
+    if sells.empty:
+        best_shops = pd.Series(dtype=object)
+    else:
+        sells_unit = sells.assign(unit_price=sells.amount / sells.quantity)
+        best_shops = (
+            sells_unit.sort_values("unit_price", ascending=False)
+            .drop_duplicates("resourceGUID")
+            .set_index("resourceGUID")["shopId"]
+        )
 
     pending = buy_stats.join(sell_stats, how="left").fillna(0)
     pending["pending_qty"] = pending.bought_qty - pending.sold_qty
     pending = pending[pending.pending_qty > 0].copy()
-    avg_price = pending.spent_sc / pending.bought_qty
-    pending["pending_cost_sc"] = (avg_price * pending.pending_qty).fillna(0)
+    pending["pending_uec"] = (
+        pending.pending_qty * pending.maxPriceperCentiSCU
+    ).fillna(0)
+    pending["suggested shopId"] = (
+        pending.index.map(best_shops).fillna("noShopId")
+    )
+
     return pending.reset_index()[
-        ["resourceGUID", "pending_qty", "pending_cost_sc"]
+        ["resourceGUID", "pending_qty", "pending_uec", "suggested shopId"]
     ]
 
 
