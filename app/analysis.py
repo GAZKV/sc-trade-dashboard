@@ -16,6 +16,65 @@ from .report import fig_to_b64
 __all__ = ["analyse"]
 
 
+def _best_routes(buys: pd.DataFrame, sells: pd.DataFrame, top_n: int = 5) -> pd.DataFrame:
+    """Return top profitable buy→sell routes per commodity."""
+    if buys.empty or sells.empty:
+        return pd.DataFrame()
+
+    buy_unit = buys.assign(unit_price=buys.price / buys.quantity)
+    sell_unit = sells.assign(unit_price=sells.amount / sells.quantity)
+
+    buy_avg = (
+        buy_unit.groupby(["resourceGUID", "shopName"]).unit_price.mean().reset_index()
+    )
+    sell_avg = (
+        sell_unit.groupby(["resourceGUID", "shopName"]).unit_price.mean().reset_index()
+    )
+
+    routes = []
+    for res in set(buy_avg.resourceGUID) & set(sell_avg.resourceGUID):
+        buy_opts = buy_avg[buy_avg.resourceGUID == res]
+        sell_opts = sell_avg[sell_avg.resourceGUID == res]
+        best_buy = buy_opts.sort_values("unit_price").iloc[0]
+        best_sell = sell_opts.sort_values("unit_price", ascending=False).iloc[0]
+        profit = best_sell.unit_price - best_buy.unit_price
+        if profit <= 0:
+            continue
+        routes.append(
+            {
+                "resourceGUID": res,
+                "buyShop": best_buy.shopName,
+                "sellShop": best_sell.shopName,
+                "profitPerUnit": float(profit),
+            }
+        )
+
+    if not routes:
+        return pd.DataFrame()
+    df_routes = pd.DataFrame(routes).sort_values("profitPerUnit", ascending=False)
+    return df_routes.head(top_n)
+
+
+def _pending_inventory(buys: pd.DataFrame, sells: pd.DataFrame) -> pd.DataFrame:
+    """Return quantity and cost of goods not yet sold."""
+    if buys.empty:
+        return pd.DataFrame()
+
+    buy_stats = buys.groupby("resourceGUID").agg(
+        bought_qty=("quantity", "sum"), spent_sc=("price", "sum")
+    )
+    sell_stats = sells.groupby("resourceGUID").agg(sold_qty=("quantity", "sum"))
+
+    pending = buy_stats.join(sell_stats, how="left").fillna(0)
+    pending["pending_qty"] = pending.bought_qty - pending.sold_qty
+    pending = pending[pending.pending_qty > 0].copy()
+    avg_price = pending.spent_sc / pending.bought_qty
+    pending["pending_cost_sc"] = (avg_price * pending.pending_qty).fillna(0)
+    return pending.reset_index()[
+        ["resourceGUID", "pending_qty", "pending_cost_sc"]
+    ]
+
+
 def _daily_profit_series(buys: pd.DataFrame, sells: pd.DataFrame) -> Dict[str, List]:
     """Return dict with date labels and profit values."""
     if buys.empty and sells.empty:
@@ -106,9 +165,14 @@ def analyse(df: pd.DataFrame) -> dict:
     buy_summary = _summary_table_buy(buys).to_dict("records")
     sell_summary = _summary_table_sell(sells).to_dict("records")
 
+    best_routes = _best_routes(buys, sells).to_dict("records")
+    pending_goods = _pending_inventory(buys, sells).to_dict("records")
+
     return {
         "kpi": kpi,
         "daily_profit": daily_profit,
         "buy_summary": buy_summary,
         "sell_summary": sell_summary,
+        "best_routes": best_routes,
+        "pending_goods": pending_goods,
     }

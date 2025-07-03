@@ -35,8 +35,10 @@ ws.onmessage = evt => {
   }
 
   // Tables helper
-  populateTable("buyTable",  data.buy_summary);
-  populateTable("sellTable", data.sell_summary);
+  populateTable("buyTable",    data.buy_summary);
+  populateTable("sellTable",   data.sell_summary);
+  populateTable("routeTable",  data.best_routes);
+  populateTable("pendingTable", data.pending_goods);
 };
 
 function set(id, txt) { document.getElementById(id).textContent = txt; }
