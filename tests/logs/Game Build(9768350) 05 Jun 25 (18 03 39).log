@@ -1,0 +1,314 @@
+<2025-06-06T00:03:50.242Z> BackupNameAttachment=" Build(9768350) 05 Jun 25 (18 03 39)"  -- used by backup system
+<2025-06-06T00:03:50.242Z> Log started on Fri Jun  6 00:03:50 2025
+<2025-06-06T00:03:50.242Z> Built on May 14 2025 18:58:07
+<2025-06-06T00:03:50.242Z> Running 64 bit version
+<2025-06-06T00:03:50.242Z> Executable: C:\Program Files\Roberts Space Industries\StarCitizen\LIVE\Bin64\StarCitizen.exe
+<2025-06-06T00:03:50.242Z> FileVersion: 4.1.149.3486
+<2025-06-06T00:03:50.242Z> ProductVersion: 4.1.149.3486
+<2025-06-06T00:03:50.242Z> Using Microsoft (tm) C++ Standard Library implementation
+<2025-06-06T00:03:50.242Z> Host CPU: Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+<2025-06-06T00:03:50.242Z> Logical CPU Count: 24
+<2025-06-06T00:03:50.242Z> [Trace] Environment:   DEV
+<2025-06-06T00:03:50.242Z> [Trace] Elastic:       https://redwood.rsi.global/app/discover
+<2025-06-06T00:03:50.242Z> [Trace] @session:      '8eb51d9f-8e25-b74b-bb99-0757cd6aa257'
+<2025-06-06T00:03:50.242Z> [Trace] @env_session:  '00000000-0000-0000-0000-000000000000'
+<2025-06-06T00:03:50.242Z> [Trace] @host_session: 'local_shard'
+<2025-06-06T00:03:50.242Z> [Trace] Instance-Logs: https://redwood.rsi.global/app/discover#/?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'2025-06-06T00:03:35.242Z',to:'2025-06-07T00:03:50.242Z'))&_a=(columns:!('@msg_idx',severity,'@product',tags,event,message),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,key:'@env_session',negate:!f,params:(query:'00000000-0000-0000-0000-000000000000'),type:phrase),query:(match_phrase:('@env_session':'00000000-0000-0000-0000-000000000000'))),('$state':(store:appState),meta:(alias:!n,disabled:!f,key:'@host_session',negate:!f,params:(query:'local_shard'),type:phrase),query:(match_phrase:('@host_session':'local_shard'))),('$state':(store:appState),meta:(alias:!n,disabled:!f,key:'@session',negate:!f,params:(query:'8eb51d9f-8e25-b74b-bb99-0757cd6aa257'),type:phrase),query:(match_phrase:('@session':'8eb51d9f-8e25-b74b-bb99-0757cd6aa257')))),grid:(columns:('@msg_idx':(width:75.33333333333331),'@product':(width:111.63333333333333),event:(width:252.4666666666667),severity:(width:84.13333333333333),tags:(width:243.9666666666667))),interval:auto,query:(language:kuery,query:''),sort:!(!('@timestamp',desc),!('@msg_idx',desc)))
+<2025-06-06T00:03:50.245Z> ===============================================================
+<2025-06-06T00:03:50.245Z>  Startup Arguments 
+<2025-06-06T00:03:50.245Z> ===============================================================
+<2025-06-06T00:03:50.245Z> [Notice] <Startup Settings> 0 settings set: [Team_OnlineTech][System][Initialization]
+<2025-06-06T00:03:50.245Z> ===============================================================
+<2025-06-06T00:03:50.262Z> [Notice] <CreateChannel> Opening channel for 'sc.external.services.analytics.v1.AnalyticsService' to endpoint xds:///bootstrap_api_listener (transport security: 0) [Team_OnlineTech][gRPC]
+<2025-06-06T00:03:50.262Z>    grpc.primary_user_agent=grpc-c++/1.49.2
+<2025-06-06T00:03:50.262Z>    grpc.http2.max_pings_without_data=0
+<2025-06-06T00:03:50.262Z>    grpc.max_receive_message_length=16777216
+<2025-06-06T00:03:50.262Z>    grpc.max_send_message_length=4194304
+<2025-06-06T00:03:50.262Z>    grpc.keepalive_permit_without_calls=1
+<2025-06-06T00:03:50.262Z>    grpc.keepalive_time_ms=120000
+<2025-06-06T00:03:50.262Z>    grpc.keepalive_timeout_ms=20000
+<2025-06-06T00:03:50.262Z>    grpc.http2.min_time_between_pings_ms=10000
+<2025-06-06T00:03:50.262Z>    grpc.http2.min_ping_interval_without_data_ms=5000
+<2025-06-06T00:03:50.268Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.push.v1.PushService' to endpoint xds:///bootstrap_api_listener (transport security: 0) [Team_OnlineTech][gRPC]
+<2025-06-06T00:03:50.269Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.presence.v1.PresenceService' to endpoint xds:///bootstrap_api_listener (transport security: 0) [Team_OnlineTech][gRPC]
+<2025-06-06T00:03:50.269Z> [Notice] <Default Trace Config loaded> Config 'CODE' loaded (Version 2) [Team_OnlineTech][Config][CigTrace]
+<2025-06-06T00:03:50.269Z> Windows 10 64 bit (build 10.0.19045)
+<2025-06-06T00:03:50.270Z> System language: Spanish
+<2025-06-06T00:03:50.270Z> Windows Directory: "C:\Windows"
+<2025-06-06T00:03:50.270Z> Local time is 18:03:50 06/05/25, system running for 17 minutes
+<2025-06-06T00:03:50.270Z> 128929MB physical memory installed, 118847MB available, 7 percent of memory in use
+<2025-06-06T00:03:50.270Z> 720MB working set, 1033MB commit size (2087MB peak), 133332MB left to commit (147361MB system wide commit limit)
+<2025-06-06T00:03:50.270Z> Current display mode is 2560x1440x32
+<2025-06-06T00:03:50.271Z> IBM enhanced (101/102-key) keyboard and 5+ button mouse installed
+<2025-06-06T00:03:50.271Z> [CIG] gEnv->IsDedicated[0] CSystem::m_bDedicatedServer[0] startupParams.bDedicatedServer[0]
+<2025-06-06T00:03:50.271Z> [CIG] startupParams.szSystemCmdLine["C:\Program Files\Roberts Space Industries\StarCitizen\LIVE\Bin64\StarCitizen.exe" ]
+<2025-06-06T00:03:50.271Z> [Notice] <Init> Process sc-client started (Local: 8eb51d9f-8e25-b74b-bb99-0757cd6aa257. Env: 00000000-0000-0000-0000-000000000000). bDedicatedServer[0] bIsService[0] bIsHeadlessClient[0] bOnline[1] bShardPersistence[1] bTools[0] szSystemCmdLine["C:\Program Files\Roberts Space Industries\StarCitizen\LIVE\Bin64\StarCitizen.exe" ]  [Team_OnlineTech][ProcessInit]
+<2025-06-06T00:03:50.280Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [sys_spec] is marked [Not Whitelisted] with a value of [0]; config file attempting to change to [-1] - IGNORING
+<2025-06-06T00:03:50.281Z> Stream Engine Initialization
+<2025-06-06T00:03:50.281Z> Branch: sc-alpha-4.1.1
+<2025-06-06T00:03:50.281Z> BuildDateStamp: Wed May 14 2025
+<2025-06-06T00:03:50.281Z> BuildTimeStamp: 08:19:03 PM CST
+<2025-06-06T00:03:50.281Z> Config: shipping
+<2025-06-06T00:03:50.281Z> Tag: public
+<2025-06-06T00:03:50.281Z> Changelist: 9768350
+<2025-06-06T00:03:50.281Z> ShelveCL: 0
+<2025-06-06T00:03:50.281Z> Video Capture initialization
+<2025-06-06T00:03:50.283Z> CIG Backend initialization
+<2025-06-06T00:03:50.283Z> [CIG] build_version[9768350]
+<2025-06-06T00:03:50.284Z> Physics initialization
+<2025-06-06T00:03:50.351Z> <Audio>: AudioSystem initialization
+<2025-06-06T00:03:50.355Z> [Audio] Wwise Init : Output Buffer (1024 x 4) : API=WASAPI
+<2025-06-06T00:03:50.358Z> Renderer initialization
+<2025-06-06T00:03:50.385Z> Logging video adapters:
+<2025-06-06T00:03:50.618Z> - NVIDIA GeForce RTX 4070 Ti SUPER (vendor = 0x10de, device = 0x2705)
+<2025-06-06T00:03:50.618Z>   - Adapter index: 0
+<2025-06-06T00:03:50.618Z>   - Dedicated video memory: 16063 MB
+<2025-06-06T00:03:50.618Z>   - Feature level: DX11.1 (SM 5.0)
+<2025-06-06T00:03:50.618Z>   - Displays connected: yes
+<2025-06-06T00:03:50.618Z>   - Suitable rendering device: yes
+<2025-06-06T00:03:50.640Z> - Microsoft Basic Render Driver (vendor = 0x1414, device = 0x008c)
+<2025-06-06T00:03:50.640Z>   - Adapter index: 1
+<2025-06-06T00:03:50.640Z>   - Dedicated video memory: 0 MB
+<2025-06-06T00:03:50.640Z>   - Feature level: DX11.1 (SM 5.0)
+<2025-06-06T00:03:50.640Z>   - Displays connected: no
+<2025-06-06T00:03:50.640Z>   - Suitable rendering device: no
+<2025-06-06T00:03:50.747Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_NV_optimus (NVIDIA Optimus layer) Version: 1.4.303
+<2025-06-06T00:03:50.747Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_NV_present (NVIDIA GR2608 layer) Version: 1.4.303
+<2025-06-06T00:03:50.747Z> [VK] Available Vulkan Layer - Layer: GalaxyOverlayVkLayer (Galaxy Overlay Vulkan Layer) Version: 1.1.73
+<2025-06-06T00:03:50.747Z> [VK] Available Vulkan Layer - Layer: GalaxyOverlayVkLayer_VERBOSE (Galaxy Overlay Vulkan Layer) Version: 1.1.73
+<2025-06-06T00:03:50.747Z> [VK] Available Vulkan Layer - Layer: GalaxyOverlayVkLayer_DEBUG (Galaxy Overlay Vulkan Layer) Version: 1.1.73
+<2025-06-06T00:03:50.747Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_OW_OVERLAY (Overwolf Overlay Layer) Version: 1.2.131
+<2025-06-06T00:03:50.747Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_OW_OBS_HOOK (OWOBS hook) Version: 1.2.131
+<2025-06-06T00:03:50.747Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_MEDIASDK_HOOK (MediaSDK) Version: 1.3.239
+<2025-06-06T00:03:50.747Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_VALVE_steam_overlay (Steam Overlay Layer) Version: 1.3.207
+<2025-06-06T00:03:50.747Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_VALVE_steam_fossilize (Steam Pipeline Caching Layer) Version: 1.4.303
+<2025-06-06T00:03:50.747Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_OBS_HOOK (Open Broadcaster Software hook) Version: 1.3.216
+<2025-06-06T00:03:50.747Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_RTSS (RTSS overlay hook bootstrap) Version: 1.3.224
+<2025-06-06T00:03:50.747Z> [VK] Available Vulkan Layer - Layer: VK_LAYER_ROCKSTAR_GAMES_social_club (Rockstar Games Social Club Layer) Version: 1.0.70
+<2025-06-06T00:03:51.105Z> GPU benchmark: 18.25 ms (Adapter index: 0, Num GPUs: 1)
+<2025-06-06T00:03:51.353Z> VulkanMetric - Device (NVIDIA GeForce RTX 4070 Ti SUPER) [GPU (Discrete)] ID:9989
+<2025-06-06T00:03:51.353Z> VulkanMetric -     Driver 576.28.0.0
+<2025-06-06T00:03:51.353Z> VulkanMetric -     VulkanAPI 1.4.303
+<2025-06-06T00:03:51.353Z> VulkanMetric -     Supports 6 Queue Families
+<2025-06-06T00:03:51.353Z> VulkanMetric - Device (NVIDIA GeForce RTX 4070 Ti SUPER) valid GPU
+<2025-06-06T00:03:51.353Z> [VK] Chosen Vulkan GPU Device (NVIDIA GeForce RTX 4070 Ti SUPER) Driver Version (576.28.0.0) Vulkan API (1.4.303) 
+<2025-06-06T00:03:51.353Z> [VK] Current Device: (NVIDIA GeForce RTX 4070 Ti SUPER) VendorID: (4318)
+<2025-06-06T00:03:51.353Z> [VK] Current Device: (NVIDIA GeForce RTX 4070 Ti SUPER) VendorID: (4318)
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_RTSS" (C:\Program Files (x86)\RivaTuner Statistics Server\Vulkan\.\RTSSVkLayer64.dll)
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_OBS_HOOK" (C:\ProgramData\obs-studio-hook\.\graphics-hook64.dll)
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_MEDIASDK_HOOK" (C:\Program Files\TikTok LIVE Studio\0.83.2\resources\app\electron\sdk\lib\MediaSDK_V2\.\plugins\game_detour_64.dll)
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_OW_OBS_HOOK" (C:\Program Files (x86)\Overwolf\0.275.0.13\.\ow-graphics-vulkan.dll)
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_OW_OVERLAY" (C:\Program Files (x86)\Overwolf\0.275.0.13\.\owclient.dll)
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_NV_present" (C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\.\nvoglv64.dll)
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message | Inserted device layer "VK_LAYER_NV_optimus" (C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\.\nvoglv64.dll)
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message | vkCreateDevice layer callstack setup to:
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |    <Application>
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |      ||
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |    <Loader>
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |      ||
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |    VK_LAYER_NV_optimus
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_LAYER_NV_OPTIMUS_1
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |            Manifest: C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\nv-vk64.json
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |            Library:  C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\.\nvoglv64.dll
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |      ||
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |    VK_LAYER_NV_present
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_LAYER_NV_GR2608_1
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |            Manifest: C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\nv-vk64.json
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |            Library:  C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\.\nvoglv64.dll
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |      ||
+<2025-06-06T00:03:51.354Z> [VK_INFO] - Loader Message |    VK_LAYER_OW_OVERLAY
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_VULKAN_OW_OVERLAY_LAYER
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Manifest: C:\Program Files (x86)\Overwolf\0.275.0.13\ow-vulkan-overlay64.json
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Library:  C:\Program Files (x86)\Overwolf\0.275.0.13\.\owclient.dll
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |      ||
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |    VK_LAYER_OW_OBS_HOOK
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_VULKAN_OW_OBS_CAPTURE
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Manifest: C:\Program Files (x86)\Overwolf\0.275.0.13\ow-graphics-vulkan64.json
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Library:  C:\Program Files (x86)\Overwolf\0.275.0.13\.\ow-graphics-vulkan.dll
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |      ||
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |    VK_LAYER_MEDIASDK_HOOK
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_VK_LAYER_MEDIASDK_HOOK_1
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Manifest: C:\Program Files\TikTok LIVE Studio\0.83.2\resources\app\electron\sdk\lib\MediaSDK_V2\MediaSDKVulkanLayer64.json
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Library:  C:\Program Files\TikTok LIVE Studio\0.83.2\resources\app\electron\sdk\lib\MediaSDK_V2\.\plugins\game_detour_64.dll
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |      ||
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |    VK_LAYER_OBS_HOOK
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_VULKAN_OBS_CAPTURE
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Manifest: C:\ProgramData\obs-studio-hook\obs-vulkan64.json
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Library:  C:\ProgramData\obs-studio-hook\.\graphics-hook64.dll
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |      ||
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |    VK_LAYER_RTSS
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Type: Implicit
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Enabled By: Implicit Layer
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |                Disable Env Var:  DISABLE_RTSS_LAYER
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Manifest: C:\Program Files (x86)\RivaTuner Statistics Server\Vulkan\RTSSVkLayer64.json
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |            Library:  C:\Program Files (x86)\RivaTuner Statistics Server\Vulkan\.\RTSSVkLayer64.dll
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |      ||
+<2025-06-06T00:03:51.355Z> [VK_INFO] - Loader Message |    <Device>
+<2025-06-06T00:03:51.356Z> [VK_INFO] - Loader Message |        Using "NVIDIA GeForce RTX 4070 Ti SUPER" with driver: "C:\Windows\System32\DriverStore\FileRepository\nvmdi.inf_amd64_845fc316023c1865\.\nvoglv64.dll"
+<2025-06-06T00:03:51.733Z> CPU benchmark: 52.46 ms (int+mem), 55.94 ms (fp+mem)
+<2025-06-06T00:03:51.733Z> Performance Index: 159.16 (CPU), 564.23 (GPU)
+<2025-06-06T00:03:51.755Z> [VK] Available Surface Formats for Physical Device -
+<2025-06-06T00:03:51.755Z> 	Format: B8G8R8A8_UNORM, ColorSpace: SRGB_NONLINEAR
+<2025-06-06T00:03:51.755Z> 	Format: B8G8R8A8_SRGB, ColorSpace: SRGB_NONLINEAR
+<2025-06-06T00:03:51.755Z> 	Format: R8G8B8A8_UNORM, ColorSpace: SRGB_NONLINEAR
+<2025-06-06T00:03:51.755Z> 	Format: R8G8B8A8_SRGB, ColorSpace: SRGB_NONLINEAR
+<2025-06-06T00:03:51.755Z> 	Format: A2B10G10R10_UNORM_PACK32, ColorSpace: SRGB_NONLINEAR
+<2025-06-06T00:03:51.755Z> [VK] Found requested Surface Format: R8G8B8A8_UNORM
+<2025-06-06T00:03:52.043Z> GPUCount: 1
+<2025-06-06T00:03:52.043Z> GPU: Vendor = NVIDIA
+<2025-06-06T00:03:52.043Z> GPU: DedicatedVidMemMB = 15295
+<2025-06-06T00:03:52.043Z> GPU: NVidia-Surround or AMD-Eyefinity = Disabled
+<2025-06-06T00:03:52.043Z> GPU: Architecture = 
+<2025-06-06T00:03:52.043Z> GPU: Compute Core Count = 8448
+<2025-06-06T00:03:52.043Z> GPU: Core Clock MHz = 0
+<2025-06-06T00:03:52.043Z> GPU: Memory Clock MHz = 0
+<2025-06-06T00:03:52.043Z> GPU: Teraflops (Calculated from iCoreClock * iNumCUs * 64 Pixels/clk * 2 instructions/MAD) = 0.000000
+<2025-06-06T00:03:52.729Z> Loaded VK PSO Cache (1116.42mb)(1.209s)
+<2025-06-06T00:03:53.635Z> [PSOCacheGen] Loaded PSOCache (270754 entries)(0.466s)
+<2025-06-06T00:03:54.077Z> GPU: DLSS Support = Available
+<2025-06-06T00:03:54.991Z> Texture Streaming: Fixed memory requirement = 2965. (Includes texture lib size)
+<2025-06-06T00:03:54.991Z> Texture Streaming: Usable VRAM = 12236
+<2025-06-06T00:03:54.991Z> Texture Streaming: Actual pool size = 4000
+<2025-06-06T00:03:54.993Z> Runtime GPU Memory: Committed: 2128 MB
+<2025-06-06T00:03:54.993Z> Runtime GPU Memory: Dedicated: 1457 MB (All: 2520 MB)
+<2025-06-06T00:03:54.993Z> Runtime GPU Memory: Shared:  659 MB (All:  810 MB)
+<2025-06-06T00:03:55.237Z> Font initialization
+<2025-06-06T00:03:55.241Z> Network initialization
+<2025-06-06T00:03:55.241Z> Profile 'off' not recognized
+<2025-06-06T00:03:55.241Z> Profile 'off' not recognized
+<2025-06-06T00:03:55.245Z> network hostname: DESKTOP-LIVN2H7
+<2025-06-06T00:03:55.245Z>   ip:192.168.1.85
+<2025-06-06T00:03:55.245Z> [Notice] <Socket Buffer Size> BindAddress[0.0.0.0:64090] isSend[1] original[65536] requested[1048576] result[1048576] [Team_Network][Network][Gateway][Socket]
+<2025-06-06T00:03:55.245Z> [Notice] <Socket Buffer Size> BindAddress[0.0.0.0:64090] isSend[0] original[65536] requested[1048576] result[1048576] [Team_Network][Network][Gateway][Socket]
+<2025-06-06T00:03:55.245Z> [Notice] <Socket Init> Initialized UDP socket [70724] bound to [0.0.0.0:64090] send buffer [1048576] recv buffer [1048576] [Team_Network][Network][Gateway][Socket]
+<2025-06-06T00:03:55.246Z> Discipline initialization
+<2025-06-06T00:03:55.246Z> [Notice] <CDisciplineServiceExternal::Init> Initialize Discipline Service; Spawning Thread [Team_GameServices][AntiCheat]
+<2025-06-06T00:03:55.246Z> [Notice] <CDisciplineServiceExternal::Init> Init phase 1 [Team_GameServices][AntiCheat]
+<2025-06-06T00:03:55.268Z> [Notice] <CDisciplineServiceExternal::Init> Init phase 2 [Team_GameServices][AntiCheat]
+<2025-06-06T00:03:55.274Z> [Notice] <CDisciplineServiceExternal::Init> Init phase 3 [Team_GameServices][AntiCheat]
+<2025-06-06T00:03:55.275Z> [Error] <CDisciplineServiceExternal::Init> Game launched without the EAC launcher [Team_GameServices][AntiCheat]
+<2025-06-06T00:03:55.276Z> [Error] <SystemInit> Discipline init failed: 0 - Game launched without the EAC launcher [Team_GameServices][AntiCheat]
+<2025-06-06T00:03:55.276Z> MovieSystem initialization
+<2025-06-06T00:03:55.281Z> Console initialization
+<2025-06-06T00:03:55.282Z> Time initialization
+<2025-06-06T00:03:55.282Z> Input initialization
+<2025-06-06T00:03:55.442Z> Initializing Animation System
+<2025-06-06T00:03:55.443Z> Initializing 3D Engine
+<2025-06-06T00:03:55.445Z> Initializing default materials...
+<2025-06-06T00:03:56.127Z> Entity system initialization
+<2025-06-06T00:03:56.134Z> Initializing AI System
+<2025-06-06T00:03:56.136Z> SubsumptionManager - Random generator seeded with value 58867760
+<2025-06-06T00:03:56.145Z> Floating point exceptions disabled.
+<2025-06-06T00:03:56.237Z> !!! Failed to register RPC [RPC.DGS.CommArray.Manage]
+<2025-06-06T00:03:56.237Z> [Notice] <CContractGenerator::CContractGenerator> Initializing Contract Generator with seed 700173002 [Team_MissionFeatures][Missions]
+<2025-06-06T00:03:57.872Z> [Notice] <CreateChannel> Opening channel for 'sc.external.services.presence.v1.PresenceService' to endpoint xds:///bootstrap_api_listener (transport security: 0) [Team_OnlineTech][gRPC]
+<2025-06-06T00:03:57.872Z>    grpc.primary_user_agent=grpc-c++/1.49.2
+<2025-06-06T00:03:57.872Z>    grpc.http2.max_pings_without_data=0
+<2025-06-06T00:03:57.872Z>    grpc.max_receive_message_length=16777216
+<2025-06-06T00:03:57.872Z>    grpc.max_send_message_length=4194304
+<2025-06-06T00:03:57.872Z>    grpc.keepalive_permit_without_calls=1
+<2025-06-06T00:03:57.872Z>    grpc.keepalive_time_ms=120000
+<2025-06-06T00:03:57.872Z>    grpc.keepalive_timeout_ms=20000
+<2025-06-06T00:03:57.872Z>    grpc.http2.min_time_between_pings_ms=10000
+<2025-06-06T00:03:57.872Z>    grpc.http2.min_ping_interval_without_data_ms=5000
+<2025-06-06T00:03:58.859Z> [Notice] <CreateChannel> Opening channel for 'sc.external.services.analytics.v1.AnalyticsService' to endpoint xds:///bootstrap_api_listener (transport security: 0) [Team_OnlineTech][gRPC]
+<2025-06-06T00:03:58.859Z>    grpc.primary_user_agent=grpc-c++/1.49.2
+<2025-06-06T00:03:58.859Z>    grpc.http2.max_pings_without_data=0
+<2025-06-06T00:03:58.859Z>    grpc.max_receive_message_length=16777216
+<2025-06-06T00:03:58.859Z>    grpc.max_send_message_length=4194304
+<2025-06-06T00:03:58.859Z>    grpc.keepalive_permit_without_calls=1
+<2025-06-06T00:03:58.859Z>    grpc.keepalive_time_ms=120000
+<2025-06-06T00:03:58.859Z>    grpc.keepalive_timeout_ms=20000
+<2025-06-06T00:03:58.859Z>    grpc.http2.min_time_between_pings_ms=10000
+<2025-06-06T00:03:58.859Z>    grpc.http2.min_ping_interval_without_data_ms=5000
+<2025-06-06T00:03:59.539Z> [Notice] <CreateChannel> Opening channel for 'sc.external.services.push.v1.PushService' to endpoint xds:///bootstrap_api_listener (transport security: 0) [Team_OnlineTech][gRPC]
+<2025-06-06T00:03:59.539Z>    grpc.primary_user_agent=grpc-c++/1.49.2
+<2025-06-06T00:03:59.539Z>    grpc.http2.max_pings_without_data=0
+<2025-06-06T00:03:59.539Z>    grpc.max_receive_message_length=16777216
+<2025-06-06T00:03:59.539Z>    grpc.max_send_message_length=4194304
+<2025-06-06T00:03:59.539Z>    grpc.keepalive_permit_without_calls=1
+<2025-06-06T00:03:59.539Z>    grpc.keepalive_time_ms=120000
+<2025-06-06T00:03:59.539Z>    grpc.keepalive_timeout_ms=20000
+<2025-06-06T00:03:59.539Z>    grpc.http2.min_time_between_pings_ms=10000
+<2025-06-06T00:03:59.539Z>    grpc.http2.min_ping_interval_without_data_ms=5000
+<2025-06-06T00:04:00.282Z> [DataCore] Binary Data Loaded. Total Time took 3.658113s
+<2025-06-06T00:04:02.061Z> [DataCore] Game Post Load. Total Time took 1.778588s
+<2025-06-06T00:04:06.573Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [g_tree_cut_reuse_dist] is marked [Not Whitelisted] with a value of [1024]; config file attempting to change to [0] as part of a cvar group - IGNORING
+<2025-06-06T00:04:06.573Z> [CVARS]: [CHANGED] CXConsole::LoadConfigVar(): variable [r.Shadows.ScreenSpace.Quality] is marked [Not Whitelisted] with a value of [3]; config file attempting to change to [3] as part of a cvar group - IGNORING
+<2025-06-06T00:04:06.599Z> [GameProfiles]: Successfully activated profile 'default' for user 'Kaloz'
+<2025-06-06T00:04:06.600Z> username Kaloz signedIn 1 userIndex 4294967295
+<2025-06-06T00:04:06.600Z> ActivateProfile profileName default
+<2025-06-06T00:04:06.600Z> [Game Version]: RELEASE COMBO BUILD (CLIENT)
+<2025-06-06T00:04:06.650Z> [ContextSystem] disabling debug traces
+<2025-06-06T00:04:06.660Z> [Notice] <[FrontendController] LoadingFrontendConfig> [FrontendController][CFrontendController::LoadConfigFile] Loading [frontendconfig.xml] completed. [Team_ArenaCommanderFeature][Code][EA]
+<2025-06-06T00:04:06.661Z> [Notice] <[FrontendController] SavingFrontendConfig> [FrontendController][CFrontendController::SaveConfigFile] [Succeed] writing to [frontendconfig.xml] [Team_ArenaCommanderFeature][Code][EA]
+<2025-06-06T00:04:06.667Z> Found 9 audio input devices'
+<2025-06-06T00:04:06.670Z> Found audio input device: ID='{0.0.1.00000000}.{08f5c46d-3aab-436d-ad83-dd8ce414093d}' FriendlyName='Micrófono (Voicemod Virtual Audio Device (WDM))' state=0x00000002
+<2025-06-06T00:04:06.671Z> Found audio input device: ID='{0.0.1.00000000}.{2fa3d346-da64-48ae-95fe-7894a7d4b911}' FriendlyName='Micrófono de los auriculares con micrófono (4- Logitech USB Headset)' state=0x00000001
+<2025-06-06T00:04:06.671Z> Found audio input device: ID='{0.0.1.00000000}.{3ad6a907-3a81-4351-a60b-5ff49687a57f}' FriendlyName='Mezcla estéreo (Realtek High Definition Audio)' state=0x00000002
+<2025-06-06T00:04:06.671Z> Found audio input device: ID='{0.0.1.00000000}.{50ac9f2c-4aba-485e-ae35-7505e52f963a}' FriendlyName='VoiceMeeter Output (VB-Audio VoiceMeeter VAIO)' state=0x00000001
+<2025-06-06T00:04:06.671Z> Found audio input device: ID='{0.0.1.00000000}.{a3fe7271-f4ac-4d07-b692-e9094473ce19}' FriendlyName='Micrófono (Realtek High Definition Audio)' state=0x00000008
+<2025-06-06T00:04:06.671Z> Found audio input device: ID='{0.0.1.00000000}.{b2aadbc9-29dd-4415-86ed-96d3ad7d0d41}' FriendlyName='Micrófono (NVIDIA Broadcast)' state=0x00000001
+<2025-06-06T00:04:06.672Z> Found audio input device: ID='{0.0.1.00000000}.{cd8c1464-c99c-4a1d-9d86-984414572233}' FriendlyName='Línea de entrada (Realtek High Definition Audio)' state=0x00000008
+<2025-06-06T00:04:06.672Z> Found audio input device: ID='{0.0.1.00000000}.{e045ef89-8dfc-4e47-8ba6-67745dde62b9}' FriendlyName='Micrófono (Logitech BRIO)' state=0x00000001
+<2025-06-06T00:04:06.672Z> Found audio input device: ID='{0.0.1.00000000}.{f2acbacd-7741-4570-90d7-69d95c977638}' FriendlyName='VoiceMeeter Aux Output (VB-Audio VoiceMeeter AUX VAIO)' state=0x00000001
+<2025-06-06T00:04:06.672Z> CMicrophoneSelectionOptionBinding::SetChoicesAndValues() displaying 8 values. There are 9 devices
+<2025-06-06T00:04:06.736Z> [flow] <noname> : Failed to create node '2436' of type 'TestRunner:AutoTest:StartStop' - FLOWGRAPH DISCARDED
+<2025-06-06T00:04:06.737Z> [flow] <noname> : Did not load all nodes (15/17 nodes) - FLOWGRAPH DISCARDED
+<2025-06-06T00:04:06.737Z> [flow] <noname> : Failed to create node '2509' of type 'TestRunner:Misc:FrameTimer' - FLOWGRAPH DISCARDED
+<2025-06-06T00:04:06.737Z> [flow] <noname> : Did not load all nodes (2/7 nodes) - FLOWGRAPH DISCARDED
+<2025-06-06T00:04:07.287Z> SubsumptionManager::BuildSubsumptionXmlLibrary - Xml loaded from folder 'Scripts/AI/Subsumption/' in memory in 0.447427 seconds
+<2025-06-06T00:04:07.434Z> SubsumptionManager::BuildSubsumptionXmlLibrary - Xml loaded from folder 'Libs/Subsumption/' in memory in 0.589309 seconds
+<2025-06-06T00:04:08.414Z> [Notice] <Game Version> Game Version Identifier: 016e8c18-aba0a16a. GameVersion: 1. DataCore: 3322793223, ClassRegistry: 128993668, Archetypes: 32203888, Components: 3245793828, OC: 4267170697 [Team_EntitySystemTech][Initialization]
+<2025-06-06T00:04:08.428Z> {SET_CONNECTION_STATE} state [CONNECTING]
+<2025-06-06T00:04:08.872Z> {SET_CONNECTION_STATE} state [CONNECTED]
+<2025-06-06T00:04:08.872Z> [Notice] <InitiateLogin> Started. Game Version Identifier: 016e8c18-aba0a16a [Team_GameServices][Login]
+<2025-06-06T00:04:08.872Z> [Notice] <ReuseChannel> Reusing channel for 'sc.external.services.login.v1.LoginService' to endpoint xds:///bootstrap_api_listener (transport security: 0) [Team_OnlineTech][gRPC]
+<2025-06-06T00:04:08.948Z> PostInit StarAnimation
+<2025-06-06T00:04:09.205Z> [PSOCacheGen] PSOCache up to date (CL=9768350, SysSpec:4)
+<2025-06-06T00:04:09.215Z> [FACEWARE] Selected camera: 1920x1080 30.00 fps - MJPG Logitech BRIO
+<2025-06-06T00:04:09.233Z> [FACEWARE] Capturing started successfully
+<2025-06-06T00:04:09.288Z> Final resolution: 2560x1440 (Borderless)
+<2025-06-06T00:04:09.311Z> Reallocating render resources with scale factor 1.00 (2560x1440)
+<2025-06-06T00:04:10.679Z> [Notice] <CreateChannel> Opening channel for 'sc.external.services.analytics.v1.AnalyticsService' to endpoint xds:///bootstrap_api_listener (transport security: 0) [Team_OnlineTech][gRPC]
+<2025-06-06T00:04:10.679Z>    grpc.primary_user_agent=grpc-c++/1.49.2
+<2025-06-06T00:04:10.679Z>    grpc.http2.max_pings_without_data=0
+<2025-06-06T00:04:10.679Z>    grpc.max_receive_message_length=16777216
+<2025-06-06T00:04:10.679Z>    grpc.max_send_message_length=4194304
+<2025-06-06T00:04:10.679Z>    grpc.keepalive_permit_without_calls=1
+<2025-06-06T00:04:10.679Z>    grpc.keepalive_time_ms=120000
+<2025-06-06T00:04:10.679Z>    grpc.keepalive_timeout_ms=20000
+<2025-06-06T00:04:10.679Z>    grpc.http2.min_time_between_pings_ms=10000
+<2025-06-06T00:04:10.679Z>    grpc.http2.min_ping_interval_without_data_ms=5000
+<2025-06-06T00:04:13.131Z> [Error] <CDiffusionCryClient::OnConnected> The initiate login failed [Team_GameServices][Login]
+<2025-06-06T00:04:13.131Z> {SET_ACCOUNT_STATE} state [kAccountLoginFailed]
+<2025-06-06T00:04:13.135Z> CServicesThread::UpdateAccountStatus connection account login failed
+<2025-06-06T00:04:13.149Z> CIG account login failed : code [7] Time[335271663]
+<2025-06-06T00:04:15.667Z> [Notice] <CreateChannel> Opening channel for 'sc.external.services.presence.v1.PresenceService' to endpoint xds:///bootstrap_api_listener (transport security: 0) [Team_OnlineTech][gRPC]
+<2025-06-06T00:04:15.667Z>    grpc.primary_user_agent=grpc-c++/1.49.2
+<2025-06-06T00:04:15.667Z>    grpc.http2.max_pings_without_data=0
+<2025-06-06T00:04:15.667Z>    grpc.max_receive_message_length=16777216
+<2025-06-06T00:04:15.667Z>    grpc.max_send_message_length=4194304
+<2025-06-06T00:04:15.667Z>    grpc.keepalive_permit_without_calls=1
+<2025-06-06T00:04:15.667Z>    grpc.keepalive_time_ms=120000
+<2025-06-06T00:04:15.667Z>    grpc.keepalive_timeout_ms=20000
+<2025-06-06T00:04:15.667Z>    grpc.http2.min_time_between_pings_ms=10000
+<2025-06-06T00:04:15.667Z>    grpc.http2.min_ping_interval_without_data_ms=5000
+<2025-06-06T00:04:16.914Z> [Notice] <Error Popup Closed> errorCode=19000 [Team_UI][Disconnection]
+<2025-06-06T00:04:16.915Z> [Error] <SystemQuit> CSystem::Quit invoked with - cause=30024, reason=Back-end services are unresponsive, exitCode=0, thread id=17916, main thread id=17916 [Team_Unknown][System]
+<2025-06-06T00:04:16.915Z> System Fast Shutdown (ExitOnQuit enabled)
+<2025-06-06T00:04:17.126Z> BaseInput - Shutting down all force feedback
+<2025-06-06T00:04:17.126Z> ActionGame - Shutting down all force feedback
+<2025-06-06T00:04:17.127Z> [CIG] CCIGBroker::FastShutdown
