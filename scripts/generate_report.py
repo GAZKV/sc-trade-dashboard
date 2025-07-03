@@ -30,10 +30,10 @@ def main():
 
     if args.excel:
         with pd.ExcelWriter(args.excel) as xls:
-            ctx["buy_summary"].to_excel(xls, "BUY",  index=False)
-            ctx["sell_summary"].to_excel(xls, "SELL", index=False)
-            ctx["best_routes"].to_excel(xls, "ROUTES", index=False)
-            ctx["pending_goods"].to_excel(xls, "PENDING", index=False)
+            pd.DataFrame(ctx["buy_summary"]).to_excel(xls, "BUY", index=False)
+            pd.DataFrame(ctx["sell_summary"]).to_excel(xls, "SELL", index=False)
+            pd.DataFrame(ctx["best_routes"]).to_excel(xls, "ROUTES", index=False)
+            pd.DataFrame(ctx["pending_goods"]).to_excel(xls, "PENDING", index=False)
 
 if __name__ == "__main__":
     main()
