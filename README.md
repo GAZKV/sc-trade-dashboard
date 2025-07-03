@@ -16,6 +16,17 @@ pip install -r requirements.txt
 uvicorn app.web.main:app --reload
 ```
 
+## Running with Uvicorn
+
+Launch the FastAPI server from the repository root using Uvicorn. The example below starts the
+app with hot reloading enabled and binds it to all interfaces on port 8000:
+
+```bash
+uvicorn app.web.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+Open `http://localhost:8000` in your browser to see the dashboard.
+
 3. Generate an HTML report from logs
 ```bash
 python scripts/generate_report.py path/to/logs/*.log report.html
