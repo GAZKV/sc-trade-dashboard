@@ -4,6 +4,7 @@ from fastapi.responses import HTMLResponse
 from fastapi import Request
 from fastapi import FastAPI, WebSocket
 from fastapi.staticfiles import StaticFiles
+from contextlib import asynccontextmanager, suppress
 import asyncio
 import pandas as pd
 import json
@@ -15,7 +16,18 @@ templates = Jinja2Templates(directory=Path(__file__).parent / "templates")
 LOG_ROOT = Path(
     r"C:/Program Files/Roberts Space Industries/StarCitizen/LIVE"
 )  # configurable
-app = FastAPI(title="SC Trade Dashboard API")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    task = asyncio.create_task(watch_logs())
+    try:
+        yield
+    finally:
+        task.cancel()
+        with suppress(asyncio.CancelledError):
+            await task
+
+app = FastAPI(title="SC Trade Dashboard API", lifespan=lifespan)
 app.mount(
     "/static",
     StaticFiles(directory=Path(__file__).parent / "static"),
@@ -42,11 +54,6 @@ async def watch_logs():
             import logging
             logging.exception("Analyse failed:")
         await asyncio.sleep(10)
-
-
-@app.on_event("startup")
-async def startup():
-    asyncio.create_task(watch_logs())
 
 
 @app.get("/api/metrics")
