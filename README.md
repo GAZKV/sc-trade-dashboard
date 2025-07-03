@@ -20,3 +20,17 @@ uvicorn app.web.main:app --reload
 ```bash
 python scripts/generate_report.py path/to/logs/*.log report.html
 ```
+
+## Report Generation Examples
+
+Generate an HTML report from the bundled sample logs:
+
+```bash
+python scripts/generate_report.py sample-data/*.log sample-report.html
+```
+
+Generate both HTML and Excel reports from an entire log directory:
+
+```bash
+python scripts/generate_report.py sample-data report.html --excel report.xlsx
+```
