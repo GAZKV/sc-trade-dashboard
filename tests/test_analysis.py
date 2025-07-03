@@ -9,7 +9,7 @@ from app.analysis import analyse
 
 
 def test_analyse_empty():
-    df = pd.DataFrame(columns=["timestamp", "operation", "shopName", "resourceGUID", "quantity", "shopPricePerCentiSCU", "price", "amount"])
+    df = pd.DataFrame(columns=["timestamp", "operation", "shopId", "shopName", "resourceGUID", "quantity", "shopPricePerCentiSCU", "price", "amount"])
     ctx = analyse(df)
     assert ctx["kpi"]["total_profit_sc"] == 0
     assert ctx["kpi"]["total_buys"] == 0
@@ -22,6 +22,7 @@ def test_analyse_basic_profit():
         {
             "timestamp": pd.Timestamp("2025-01-01T10:00:00Z"),
             "operation": "Buy",
+            "shopId": "ID1",
             "shopName": "ShopA",
             "resourceGUID": "res1",
             "quantity": Decimal("10"),
@@ -32,6 +33,7 @@ def test_analyse_basic_profit():
         {
             "timestamp": pd.Timestamp("2025-01-02T10:00:00Z"),
             "operation": "Sell",
+            "shopId": "ID2",
             "shopName": "ShopB",
             "resourceGUID": "res1",
             "quantity": Decimal("10"),

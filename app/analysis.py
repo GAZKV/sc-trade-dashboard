@@ -25,10 +25,10 @@ def _best_routes(buys: pd.DataFrame, sells: pd.DataFrame, top_n: int = 5) -> pd.
     sell_unit = sells.assign(unit_price=sells.amount / sells.quantity)
 
     buy_avg = (
-        buy_unit.groupby(["resourceGUID", "shopName"]).unit_price.mean().reset_index()
+        buy_unit.groupby(["resourceGUID", "shopId"]).unit_price.mean().reset_index()
     )
     sell_avg = (
-        sell_unit.groupby(["resourceGUID", "shopName"]).unit_price.mean().reset_index()
+        sell_unit.groupby(["resourceGUID", "shopId"]).unit_price.mean().reset_index()
     )
 
     routes = []
@@ -43,8 +43,8 @@ def _best_routes(buys: pd.DataFrame, sells: pd.DataFrame, top_n: int = 5) -> pd.
         routes.append(
             {
                 "resourceGUID": res,
-                "buyShop": best_buy.shopName,
-                "sellShop": best_sell.shopName,
+                "buyShopId": best_buy.shopId,
+                "sellShopId": best_sell.shopId,
                 "profitPerUnit": float(profit),
             }
         )
@@ -112,7 +112,7 @@ def _summary_table_buy(buys: pd.DataFrame) -> pd.DataFrame:
     if buys.empty:
         return pd.DataFrame()
     return (
-        buys.groupby(["shopName", "resourceGUID"])
+        buys.groupby(["shopId", "resourceGUID"])
         .agg(
             minQuantity=("quantity", "min"),
             avgQuantity=("quantity", "mean"),
@@ -131,7 +131,7 @@ def _summary_table_sell(sells: pd.DataFrame) -> pd.DataFrame:
     sells = sells.copy()
     sells["amountSell"] = sells.amount / sells.quantity
     return (
-        sells.groupby(["shopName", "resourceGUID"])
+        sells.groupby(["shopId", "resourceGUID"])
         .agg(
             minQuantity=("quantity", "min"),
             avgQuantity=("quantity", "mean"),

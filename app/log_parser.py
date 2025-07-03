@@ -46,6 +46,7 @@ def _parse_line(line: str) -> dict | None:
                 m.group("ts"), "%Y-%m-%dT%H:%M:%S.%fZ"
             ),
             "operation": op,
+            "shopId": fields.get("shopId", ""),
             "shopName": fields.get("shopName", ""),
             "resourceGUID": fields.get("resourceGUID", ""),
             "quantity": quantity,
