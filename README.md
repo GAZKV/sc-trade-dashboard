@@ -20,3 +20,23 @@ uvicorn app.web.main:app --reload
 ```bash
 python scripts/generate_report.py path/to/logs/*.log report.html
 ```
+
+## Sample Data
+
+This repository includes a `sample-data/` directory containing several Star Citizen
+log files. You can use these logs to try out the parsing and reporting pipeline
+without collecting your own data:
+
+```bash
+python scripts/generate_report.py sample-data/*.log report.html
+```
+
+## Running Tests
+
+Install the dependencies and run `pytest` to execute the test suite which
+processes a few bundled log files:
+
+```bash
+pip install -r requirements.txt
+pytest -q
+```

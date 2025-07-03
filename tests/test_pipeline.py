@@ -21,6 +21,13 @@ def run_pipeline(log_dir: Path = DEFAULT_LOG_DIR) -> dict:
     return ctx
 
 
+def test_run_pipeline():
+    """Run the pipeline on bundled log samples and ensure KPIs are returned."""
+    ctx = run_pipeline()
+    assert ctx["kpi"]["total_buys"] >= 0
+    assert ctx["kpi"]["total_sells"] >= 0
+
+
 if __name__ == "__main__":
     import sys
     log_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_LOG_DIR
