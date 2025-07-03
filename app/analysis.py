@@ -91,13 +91,59 @@ def _records(df: pd.DataFrame) -> List[dict]:
 
 
 def _last_transactions(df: pd.DataFrame) -> pd.DataFrame:
-    """Return the most recent operation for each shop."""
+    """Return the most recent operation for each shop with extra details."""
     if df.empty:
         return pd.DataFrame()
+
     idx = df.groupby("shopId").timestamp.idxmax()
-    last = df.loc[idx, ["shopId", "operation", "timestamp"]].copy()
+    cols = [
+        "shopId",
+        "operation",
+        "resourceGUID",
+        "quantity",
+        "price",
+        "amount",
+        "timestamp",
+    ]
+    last = df.loc[idx, cols].copy()
+
+    # Average unit cost per resource to estimate sell profits
+    buys = df[df.operation == "Buy"]
+    if not buys.empty:
+        unit_cost = (
+            buys.groupby("resourceGUID").price.sum()
+            / buys.groupby("resourceGUID").quantity.sum()
+        ).to_dict()
+    else:
+        unit_cost = {}
+
+    last["cost_sc"] = 0.0
+    last["profit_sc"] = 0.0
+
+    buy_mask = last.operation == "Buy"
+    sell_mask = last.operation == "Sell"
+
+    last.loc[buy_mask, "cost_sc"] = last.loc[buy_mask, "price"].astype(float)
+
+    if sell_mask.any():
+        avg_cost = last.loc[sell_mask, "resourceGUID"].map(unit_cost).fillna(0)
+        last.loc[sell_mask, "profit_sc"] = (
+            last.loc[sell_mask, "amount"]
+            - avg_cost * last.loc[sell_mask, "quantity"]
+        ).astype(float)
+
     last["timestamp"] = last.timestamp.dt.strftime("%Y-%m-%d %H:%M:%S")
-    return last.sort_values("timestamp", ascending=False)
+    return last.sort_values("timestamp", ascending=False)[
+        [
+            "shopId",
+            "operation",
+            "resourceGUID",
+            "quantity",
+            "cost_sc",
+            "profit_sc",
+            "timestamp",
+        ]
+    ]
 
 
 def _daily_profit_series(buys: pd.DataFrame, sells: pd.DataFrame) -> Dict[str, List]:
