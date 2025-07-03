@@ -11,8 +11,12 @@ def fig_to_b64(fig) -> str:
     plt.close(fig)
     return base64.b64encode(buf.getvalue()).decode()
 
+<<<<<<< HEAD
 
 HTML_TEMPLATE = Path(__file__).with_name("templates") / "dashboard.html"
+=======
+HTML_TEMPLATE = Path(__file__).parent / "web" / "templates" / "dashboard.html"
+>>>>>>> origin/codex/update-template-path-in-report.py
 
 
 def render_html(ctx: dict, dst: Path):
