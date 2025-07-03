@@ -18,3 +18,9 @@ body {
   height: 100%;
 }
 
+/* Improve KPI readability */
+.kpi .card-title,
+.kpi .card-text {
+  color: #fff;
+}
+
