@@ -31,12 +31,19 @@ function saveShopName(id, name) {
 function enableEdit(cell, idValue, currentName, saveFn) {
   cell.ondblclick = () => {
     cell.innerHTML = "";
+
+    const group = document.createElement("div");
+    group.className = "input-group input-group-sm";
+
     const input = document.createElement("input");
     input.type = "text";
     input.placeholder = idValue;
     input.value = currentName || "";
+    input.className = "form-control";
+
     const btn = document.createElement("button");
     btn.textContent = "Apply";
+    btn.className = "btn btn-success";
     btn.onclick = () => {
       const val = input.value.trim();
       if (val && val !== currentName && val !== idValue) {
@@ -46,8 +53,11 @@ function enableEdit(cell, idValue, currentName, saveFn) {
         enableEdit(cell, idValue, currentName, saveFn);
       }
     };
-    cell.appendChild(input);
-    cell.appendChild(btn);
+
+    group.appendChild(input);
+    group.appendChild(btn);
+    cell.appendChild(group);
+
     input.focus();
   };
 }
@@ -128,14 +138,22 @@ function populateTable(id, rows) {
           cell.textContent = mapped;
           enableEdit(cell, v, mapped, saveResourceName);
         } else if (id === "pendingTable") {
+          const group = document.createElement("div");
+          group.className = "input-group input-group-sm";
+
           const input = document.createElement("input");
           input.type = "text";
           input.placeholder = v;
+          input.className = "form-control";
+
           const btn = document.createElement("button");
           btn.textContent = "Apply";
+          btn.className = "btn btn-success";
           btn.onclick = () => saveResourceName(v, input.value || v);
-          cell.appendChild(input);
-          cell.appendChild(btn);
+
+          group.appendChild(input);
+          group.appendChild(btn);
+          cell.appendChild(group);
         } else {
           cell.textContent = v;
           enableEdit(cell, v, "", saveResourceName);
@@ -146,14 +164,22 @@ function populateTable(id, rows) {
           cell.textContent = mapped;
           enableEdit(cell, v, mapped, saveShopName);
         } else if (id === "lastTransTable") {
+          const group = document.createElement("div");
+          group.className = "input-group input-group-sm";
+
           const input = document.createElement("input");
           input.type = "text";
           input.placeholder = v;
+          input.className = "form-control";
+
           const btn = document.createElement("button");
           btn.textContent = "Apply";
+          btn.className = "btn btn-success";
           btn.onclick = () => saveShopName(v, input.value || v);
-          cell.appendChild(input);
-          cell.appendChild(btn);
+
+          group.appendChild(input);
+          group.appendChild(btn);
+          cell.appendChild(group);
         } else {
           cell.textContent = v;
           enableEdit(cell, v, "", saveShopName);
