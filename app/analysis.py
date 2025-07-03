@@ -54,11 +54,13 @@ def _pending_inventory(buys: pd.DataFrame, sells: pd.DataFrame) -> pd.DataFrame:
     if buys.empty:
         return pd.DataFrame()
 
-    # Stats from buys: quantity purchased, spend and max unit price
-    buy_stats = buys.groupby("resourceGUID").agg(
+    buys_unit = buys.assign(price_per_scu=buys.price / buys.quantity)
+
+    # Stats from buys: quantity purchased, spend and max unit price (per SCU)
+    buy_stats = buys_unit.groupby("resourceGUID").agg(
         bought_qty=("quantity", "sum"),
         spent_sc=("price", "sum"),
-        maxPriceperCentiSCU=("shopPricePerCentiSCU", "max"),
+        maxPriceperSCU=("price_per_scu", "max"),
     )
 
     # How much of each resource has been sold
@@ -79,7 +81,7 @@ def _pending_inventory(buys: pd.DataFrame, sells: pd.DataFrame) -> pd.DataFrame:
     pending["pending_qty"] = pending.bought_qty - pending.sold_qty
     pending = pending[pending.pending_qty > 0].copy()
     pending["pending_uec"] = (
-        pending.pending_qty * pending.maxPriceperCentiSCU
+        pending.pending_qty * pending.maxPriceperSCU
     ).fillna(0)
     pending["suggested shopId"] = (
         pending.index.map(best_shops).fillna("noShopId")
@@ -184,15 +186,16 @@ def _daily_profit_series(buys: pd.DataFrame, sells: pd.DataFrame) -> Dict[str, L
 def _summary_table_buy(buys: pd.DataFrame) -> pd.DataFrame:
     if buys.empty:
         return pd.DataFrame()
+    buys_unit = buys.assign(price_per_scu=buys.price / buys.quantity)
     return (
-        buys.groupby(["shopId", "resourceGUID"])
+        buys_unit.groupby(["shopId", "resourceGUID"])
         .agg(
             minQuantity=("quantity", "min"),
             avgQuantity=("quantity", "mean"),
             maxQuantity=("quantity", "max"),
-            minPriceperCentiSCU=("shopPricePerCentiSCU", "min"),
-            avgPriceperCentiSCU=("shopPricePerCentiSCU", "mean"),
-            maxPriceperCentiSCU=("shopPricePerCentiSCU", "max"),
+            minPriceperSCU=("price_per_scu", "min"),
+            avgPriceperSCU=("price_per_scu", "mean"),
+            maxPriceperSCU=("price_per_scu", "max"),
         )
         .reset_index()
     )
