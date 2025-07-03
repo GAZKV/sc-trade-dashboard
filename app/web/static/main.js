@@ -3,9 +3,7 @@ let lastData;
 
 const resourceNames = {
   // Predefined mappings for common resources
-  "res1": "Test Resource",
-  "97f623df-e359-4d51-b819-91644b31ead2": "Commodity A",
-  "61189578-ed7a-4491-9774-37ae2f82b8b0": "Commodity B",
+  "res1": "Test Resource"
 };
 
 Object.assign(resourceNames, JSON.parse(localStorage.getItem("resourceNames") || "{}"));
