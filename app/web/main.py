@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from fastapi import Request
@@ -14,7 +15,10 @@ from ..analysis import analyse
 templates = Jinja2Templates(directory=Path(__file__).parent / "templates")
 
 LOG_ROOT = Path(
-    r"C:/Program Files/Roberts Space Industries/StarCitizen/LIVE"
+    os.getenv(
+        "LOG_ROOT",
+        r"C:/Program Files/Roberts Space Industries/StarCitizen/LIVE",
+    )
 )  # configurable
 
 @asynccontextmanager
