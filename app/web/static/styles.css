@@ -3,7 +3,6 @@ body {
   margin: 0; padding: 0 1rem;
   background: #0d1117; color: #e6edf3;
 }
-header { display: flex; justify-content: space-between; align-items: baseline; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0; }
 .card { background: #161b22; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.5); text-align: center; }
 .card h2 { margin: 0 0 0.5rem; font-size: 1.1rem; }
