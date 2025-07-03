@@ -7,6 +7,9 @@
   <title>Star Citizen Trade Dashboard</title>
   <link rel="stylesheet" href="/static/styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+  {% if ctx_json %}
+  <script id="init-data" type="application/json">{{ ctx_json|safe }}</script>
+  {% endif %}
 </head>
 <body>
   <header>

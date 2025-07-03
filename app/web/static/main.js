@@ -1,9 +1,6 @@
-const wsUrl = `${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws`;
-const ws = new WebSocket(wsUrl);
 let chart;
 
-ws.onmessage = evt => {
-  const data = JSON.parse(evt.data);
+function updateDashboard(data) {
   if (!data.kpi) return; // bootstrap state
 
   // KPI widgets
@@ -39,7 +36,16 @@ ws.onmessage = evt => {
   populateTable("sellTable",   data.sell_summary);
   populateTable("routeTable",  data.best_routes);
   populateTable("pendingTable", data.pending_goods);
-};
+}
+
+const initEl = document.getElementById('init-data');
+if (initEl) {
+  updateDashboard(JSON.parse(initEl.textContent));
+} else {
+  const wsUrl = `${location.protocol === 'https:' ? 'wss' : 'ws'}://${location.host}/ws`;
+  const ws = new WebSocket(wsUrl);
+  ws.onmessage = evt => updateDashboard(JSON.parse(evt.data));
+}
 
 function set(id, txt) { document.getElementById(id).textContent = txt; }
 
