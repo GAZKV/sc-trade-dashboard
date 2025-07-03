@@ -31,6 +31,14 @@ without collecting your own data:
 python scripts/generate_report.py sample-data/*.log report.html
 ```
 
+## Resource Name Mapping
+
+The dashboard replaces raw `resourceGUID` values with human‑readable names. A
+small dictionary of common mappings is bundled in `static/main.js`. When an
+unknown GUID appears in the **Pending Inventory** table, a text box and `Apply`
+button let you provide a custom name. The mapping is stored in your browser's
+`localStorage` and applied to all tables immediately.
+
 ## Running Tests
 
 Install the dependencies and run `pytest` to execute the test suite which

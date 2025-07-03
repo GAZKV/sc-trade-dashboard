@@ -1,6 +1,24 @@
 let chart;
+let lastData;
+
+const resourceNames = {
+  // Predefined mappings for common resources
+  "res1": "Test Resource",
+  "97f623df-e359-4d51-b819-91644b31ead2": "Commodity A",
+  "61189578-ed7a-4491-9774-37ae2f82b8b0": "Commodity B",
+};
+
+Object.assign(resourceNames, JSON.parse(localStorage.getItem("resourceNames") || "{}"));
+
+function saveResourceName(guid, name) {
+  if (!name) return;
+  resourceNames[guid] = name;
+  localStorage.setItem("resourceNames", JSON.stringify(resourceNames));
+  if (lastData) updateDashboard(lastData);
+}
 
 function updateDashboard(data) {
+  lastData = data;
   if (!data.kpi) return; // bootstrap state
 
   // KPI widgets
@@ -66,12 +84,30 @@ function populateTable(id, rows) {
   const tbody = tbl.createTBody();
   rows.forEach(r => {
     const tr = tbody.insertRow();
-    Object.values(r).forEach(v => {
+    Object.entries(r).forEach(([key, v]) => {
       const cell = tr.insertCell();
-      cell.textContent =
-        typeof v === "number"
-          ? v.toLocaleString(undefined, { maximumFractionDigits: 2 })
-          : v;
+      if (key === "resourceGUID") {
+        const mapped = resourceNames[v];
+        if (mapped) {
+          cell.textContent = mapped;
+        } else if (id === "pendingTable") {
+          const input = document.createElement("input");
+          input.type = "text";
+          input.placeholder = v;
+          const btn = document.createElement("button");
+          btn.textContent = "Apply";
+          btn.onclick = () => saveResourceName(v, input.value || v);
+          cell.appendChild(input);
+          cell.appendChild(btn);
+        } else {
+          cell.textContent = v;
+        }
+      } else {
+        cell.textContent =
+          typeof v === "number"
+            ? v.toLocaleString(undefined, { maximumFractionDigits: 2 })
+            : v;
+      }
     });
   });
 }
