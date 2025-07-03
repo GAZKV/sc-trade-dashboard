@@ -25,3 +25,8 @@ if __name__ == "__main__":
     import sys
     log_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_LOG_DIR
     run_pipeline(log_dir)
+
+
+def test_pipeline_sample_data():
+    ctx = run_pipeline(Path("sample-data"))
+    assert ctx["kpi"]["total_buys"] >= 0
