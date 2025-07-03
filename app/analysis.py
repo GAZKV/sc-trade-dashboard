@@ -75,6 +75,19 @@ def _pending_inventory(buys: pd.DataFrame, sells: pd.DataFrame) -> pd.DataFrame:
     ]
 
 
+def _records(df: pd.DataFrame) -> List[dict]:
+    """Convert a DataFrame to a list of dicts with Decimals cast to float."""
+    if df.empty:
+        return []
+    records = []
+    for rec in df.to_dict("records"):
+        for k, v in rec.items():
+            if isinstance(v, Decimal):
+                rec[k] = float(v)
+        records.append(rec)
+    return records
+
+
 def _daily_profit_series(buys: pd.DataFrame, sells: pd.DataFrame) -> Dict[str, List]:
     """Return dict with date labels and profit values."""
     if buys.empty and sells.empty:
@@ -162,11 +175,11 @@ def analyse(df: pd.DataFrame) -> dict:
 
     daily_profit = _daily_profit_series(buys, sells)
 
-    buy_summary = _summary_table_buy(buys).to_dict("records")
-    sell_summary = _summary_table_sell(sells).to_dict("records")
+    buy_summary = _records(_summary_table_buy(buys))
+    sell_summary = _records(_summary_table_sell(sells))
 
-    best_routes = _best_routes(buys, sells).to_dict("records")
-    pending_goods = _pending_inventory(buys, sells).to_dict("records")
+    best_routes = _records(_best_routes(buys, sells))
+    pending_goods = _records(_pending_inventory(buys, sells))
 
     return {
         "kpi": kpi,
