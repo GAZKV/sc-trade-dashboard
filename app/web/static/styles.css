@@ -52,7 +52,8 @@ header { display: flex; justify-content: space-between; align-items: baseline; }
 }
 
 /* Pending Inventory input boxes and Apply buttons */
-#pendingTable input[type="text"] {
+#pendingTable input[type="text"],
+#lastTransTable input[type="text"] {
   background: #161b22;
   border: 1px solid #30363d;
   color: #e6edf3;
@@ -61,7 +62,8 @@ header { display: flex; justify-content: space-between; align-items: baseline; }
   margin-right: 0.25rem;
 }
 
-#pendingTable button {
+#pendingTable button,
+#lastTransTable button {
   background: #238636;
   color: #e6edf3;
   border: none;
@@ -71,6 +73,7 @@ header { display: flex; justify-content: space-between; align-items: baseline; }
   cursor: pointer;
 }
 
-#pendingTable button:hover {
+#pendingTable button:hover,
+#lastTransTable button:hover {
   background: #2ea043;
 }

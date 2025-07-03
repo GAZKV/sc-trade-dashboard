@@ -84,8 +84,20 @@ def _records(df: pd.DataFrame) -> List[dict]:
         for k, v in rec.items():
             if isinstance(v, Decimal):
                 rec[k] = float(v)
+            elif isinstance(v, (datetime, pd.Timestamp)):
+                rec[k] = v.isoformat()
         records.append(rec)
     return records
+
+
+def _last_transactions(df: pd.DataFrame) -> pd.DataFrame:
+    """Return the most recent operation for each shop."""
+    if df.empty:
+        return pd.DataFrame()
+    idx = df.groupby("shopId").timestamp.idxmax()
+    last = df.loc[idx, ["shopId", "operation", "timestamp"]].copy()
+    last["timestamp"] = last.timestamp.dt.strftime("%Y-%m-%d %H:%M:%S")
+    return last.sort_values("timestamp", ascending=False)
 
 
 def _daily_profit_series(buys: pd.DataFrame, sells: pd.DataFrame) -> Dict[str, List]:
@@ -180,6 +192,7 @@ def analyse(df: pd.DataFrame) -> dict:
 
     best_routes = _records(_best_routes(buys, sells))
     pending_goods = _records(_pending_inventory(buys, sells))
+    last_transactions = _records(_last_transactions(df))
 
     return {
         "kpi": kpi,
@@ -188,4 +201,5 @@ def analyse(df: pd.DataFrame) -> dict:
         "sell_summary": sell_summary,
         "best_routes": best_routes,
         "pending_goods": pending_goods,
+        "last_transactions": last_transactions,
     }

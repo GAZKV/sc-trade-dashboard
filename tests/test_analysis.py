@@ -51,3 +51,6 @@ def test_analyse_basic_profit():
     assert ctx["daily_profit"]["values"] == [-100000.0, 150000.0]
     assert ctx["best_routes"][0]["profitPerUnit"] == 5000.0
     assert ctx["pending_goods"] == []
+    last = {rec["shopId"]: rec["operation"] for rec in ctx["last_transactions"]}
+    assert last["ID1"] == "Buy"
+    assert last["ID2"] == "Sell"

@@ -6,12 +6,25 @@ const resourceNames = {
   "res1": "Test Resource"
 };
 
+const shopNames = {
+  // Predefined mappings for common shops
+  "ID1": "Test Shop"
+};
+
 Object.assign(resourceNames, JSON.parse(localStorage.getItem("resourceNames") || "{}"));
+Object.assign(shopNames, JSON.parse(localStorage.getItem("shopNames") || "{}"));
 
 function saveResourceName(guid, name) {
   if (!name) return;
   resourceNames[guid] = name;
   localStorage.setItem("resourceNames", JSON.stringify(resourceNames));
+  if (lastData) updateDashboard(lastData);
+}
+
+function saveShopName(id, name) {
+  if (!name) return;
+  shopNames[id] = name;
+  localStorage.setItem("shopNames", JSON.stringify(shopNames));
   if (lastData) updateDashboard(lastData);
 }
 
@@ -57,6 +70,7 @@ function updateDashboard(data) {
   populateTable("sellTable",   data.sell_summary);
   populateTable("routeTable",  data.best_routes);
   populateTable("pendingTable", data.pending_goods);
+  populateTable("lastTransTable", data.last_transactions);
 }
 
 const initEl = document.getElementById('init-data');
@@ -95,6 +109,22 @@ function populateTable(id, rows) {
           const btn = document.createElement("button");
           btn.textContent = "Apply";
           btn.onclick = () => saveResourceName(v, input.value || v);
+          cell.appendChild(input);
+          cell.appendChild(btn);
+        } else {
+          cell.textContent = v;
+        }
+      } else if (key === "shopId") {
+        const mapped = shopNames[v];
+        if (mapped) {
+          cell.textContent = mapped;
+        } else if (id === "lastTransTable") {
+          const input = document.createElement("input");
+          input.type = "text";
+          input.placeholder = v;
+          const btn = document.createElement("button");
+          btn.textContent = "Apply";
+          btn.onclick = () => saveShopName(v, input.value || v);
           cell.appendChild(input);
           cell.appendChild(btn);
         } else {
