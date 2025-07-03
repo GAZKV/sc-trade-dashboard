@@ -16,32 +16,27 @@ pip install -r requirements.txt
 uvicorn app.web.main:app --reload
 ```
 
-## Running with Uvicorn
-
-Launch the FastAPI server from the repository root using Uvicorn. The example below starts the
-app with hot reloading enabled and binds it to all interfaces on port 8000:
-
-```bash
-uvicorn app.web.main:app --reload --host 0.0.0.0 --port 8000
-```
-
-Open `http://localhost:8000` in your browser to see the dashboard.
-
 3. Generate an HTML report from logs
 ```bash
 python scripts/generate_report.py path/to/logs/*.log report.html
 ```
 
-## Report Generation Examples
+## Sample Data
 
-Generate an HTML report from the bundled sample logs:
+This repository includes a `sample-data/` directory containing several Star Citizen
+log files. You can use these logs to try out the parsing and reporting pipeline
+without collecting your own data:
 
 ```bash
-python scripts/generate_report.py sample-data/*.log sample-report.html
+python scripts/generate_report.py sample-data/*.log report.html
 ```
 
-Generate both HTML and Excel reports from an entire log directory:
+## Running Tests
+
+Install the dependencies and run `pytest` to execute the test suite which
+processes a few bundled log files:
 
 ```bash
-python scripts/generate_report.py sample-data report.html --excel report.xlsx
+pip install -r requirements.txt
+pytest -q
 ```
