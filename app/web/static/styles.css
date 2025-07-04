@@ -1,14 +1,4 @@
-body {
-  font-family: system-ui, sans-serif;
-  margin: 0; padding: 0 1rem;
-  background: #0d1117; color: #e6edf3;
+.chart {
+  width: 100%;
+  height: 320px;
 }
-header { display: flex; justify-content: space-between; align-items: baseline; }
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0; }
-.card { background: #161b22; border-radius: 0.75rem; padding: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.5); text-align: center; }
-.card h2 { margin: 0 0 0.5rem; font-size: 1.1rem; }
-.card p  { font-size: 1.4rem; font-weight: bold; }
-.chart { width: 100%; height: 320px; }
-.data-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
-.data-table th, .data-table td { border: 1px solid #30363d; padding: 0.25rem 0.5rem; text-align: right; }
-.data-table th { background: #21262d; }
