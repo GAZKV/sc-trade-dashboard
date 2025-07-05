@@ -75,3 +75,22 @@ header .navbar {
 #log-summary {
   color: #ccc;
 }
+
+/* Tables grid and pagination */
+#tables {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: 1rem;
+}
+
+@media (min-width: 1920px) {
+  #tables {
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  }
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
