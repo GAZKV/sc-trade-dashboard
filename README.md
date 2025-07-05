@@ -1,8 +1,7 @@
 # sc-trade-dashboard
-Open-source Python web dashboard that parses Star Citizen logs to visualize trading activity, profits, and commodity trends in real time.
+Open-source Python dashboard built with **FastAPI** to parse Star Citizen logs and visualize trading activity, profits, and commodity trends in real time.
 
-A lightweight, FastAPI-powered web app that turns raw Star Citizen log files into an interactive trading dashboard.
-The backend runs as a FastAPI application (start with `uvicorn app.web.main:app`) and ingests your logs\Session files, computes buy/sell metrics, route profitability, and commodity price evolution with pandas; the frontend (Plotly/Dash) renders live charts, tables, and KPIs so haulers and miners can spot the most lucrative loops at a glance. Fully containerized, cross-platform, and ready for self-hosting
+Launch the backend as a FastAPI application with `uvicorn app.web.main:app`. It ingests your logs\Session files, computes buy/sell metrics, route profitability, and commodity price evolution with pandas; the frontend (Plotly/Dash) renders live charts, tables, and KPIs so haulers and miners can spot the most lucrative loops at a glance. Fully containerized, cross-platform, and ready for self-hosting
 
 ## Getting Started
 
