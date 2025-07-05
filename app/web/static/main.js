@@ -77,6 +77,9 @@ function updateDashboard(data) {
   set("sells",  data.kpi.total_sells.toLocaleString());
   document.getElementById("last-update").textContent =
     `Updated ${new Date().toLocaleTimeString()}`;
+  if (data.log_info) {
+    document.getElementById("log-summary").textContent = `${data.log_info.count} logs from ${data.log_info.path}`;
+  }
 
   // Chart (create once, then update datasets)
   if (!chart) {

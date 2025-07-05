@@ -50,9 +50,11 @@ async def watch_logs():
     global _latest_ctx
     while True:
         try:
-            df = pd.DataFrame(iter_records(collect_files([str(LOG_ROOT)])))
-            if not df.empty:
-                _latest_ctx = analyse(df)
+            files = collect_files([str(LOG_ROOT)])
+            df = pd.DataFrame(iter_records(files))
+            ctx = analyse(df)
+            ctx["log_info"] = {"path": str(LOG_ROOT), "count": len(files)}
+            _latest_ctx = ctx
         except Exception:
             import logging
             logging.exception("Analyse failed:")
