@@ -121,20 +121,31 @@ if (initEl) {
 
 function set(id, txt) { document.getElementById(id).textContent = txt; }
 
-function populateTable(id, rows) {
+function populateTable(id, rows, perPage = 10) {
   const tbl = document.getElementById(id);
+  const container = tbl.parentNode;
   tbl.innerHTML = "";
+  const oldNav = container.querySelector('.pagination-controls');
+  if (oldNav) oldNav.remove();
   if (!rows.length) return;
-  // header
-  const thead = tbl.createTHead();
-  const hdrRow = thead.insertRow();
-  Object.keys(rows[0]).forEach(col => hdrRow.insertCell().textContent = col);
-  // body
-  const tbody = tbl.createTBody();
-  rows.forEach(r => {
-    const tr = tbody.insertRow();
-    Object.entries(r).forEach(([key, v]) => {
-      const cell = tr.insertCell();
+
+  const sortRows = rows.slice();
+  if (rows[0].timestamp) {
+    sortRows.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+  }
+
+  const totalPages = Math.ceil(sortRows.length / perPage);
+
+  function render(page) {
+    tbl.innerHTML = "";
+    const thead = tbl.createTHead();
+    const hdrRow = thead.insertRow();
+    Object.keys(sortRows[0]).forEach(col => hdrRow.insertCell().textContent = col);
+    const tbody = tbl.createTBody();
+    sortRows.slice((page - 1) * perPage, page * perPage).forEach(r => {
+      const tr = tbody.insertRow();
+      Object.entries(r).forEach(([key, v]) => {
+        const cell = tr.insertCell();
       if (key === "resourceGUID") {
         const mapped = resourceNames[v];
         if (mapped) {
@@ -193,6 +204,24 @@ function populateTable(id, rows) {
             ? v.toLocaleString(undefined, { maximumFractionDigits: 2 })
             : v;
       }
+      });
     });
-  });
+  }
+
+  function addPagination() {
+    if (totalPages <= 1) return;
+    const nav = document.createElement('div');
+    nav.className = 'pagination-controls';
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement('button');
+      btn.textContent = i;
+      btn.className = 'btn btn-sm btn-secondary mx-1';
+      btn.onclick = () => render(i);
+      nav.appendChild(btn);
+    }
+    container.appendChild(nav);
+  }
+
+  render(1);
+  addPagination();
 }
