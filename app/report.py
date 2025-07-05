@@ -12,6 +12,7 @@ def fig_to_b64(fig) -> str:
     plt.close(fig)
     return base64.b64encode(buf.getvalue()).decode()
 
+
 HTML_TEMPLATE = Path(__file__).parent / "web" / "templates" / "dashboard.html"
 
 
