@@ -52,3 +52,14 @@ def test_iter_records_and_collect_files(tmp_path):
     records = list(iter_records(files))
     assert len(records) == 4
     assert [rec["operation"] for rec in records] == ["Buy", "Sell", "Move", "Stock"]
+
+
+def test_collect_files_absolute_glob(tmp_path):
+    log_file = tmp_path / "abs.log"
+    log_file.write_text(BUY_LINE)
+
+    pattern = str(tmp_path / "*.log")
+    files = collect_files([pattern])
+    assert log_file in files
+    records = list(iter_records(files))
+    assert len(records) == 1
