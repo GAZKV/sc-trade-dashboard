@@ -52,3 +52,26 @@ body {
 .navbar-nav .nav-link:hover {
   background-color: #343a40;
 }
+
+/* Header styling */
+header {
+  margin: 1rem 0;
+}
+
+header .navbar {
+  background: #161b22;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+#last-update,
+#log-summary {
+  color: #ccc;
+}
