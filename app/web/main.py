@@ -14,12 +14,8 @@ from ..analysis import analyse
 
 templates = Jinja2Templates(directory=Path(__file__).parent / "templates")
 
-LOG_ROOT = Path(
-    os.getenv(
-        "LOG_ROOT",
-        r"C:/Program Files/Roberts Space Industries/StarCitizen/LIVE",
-    )
-)  # configurable
+DEFAULT_LOG_ROOT = Path.home() / "StarCitizen" / "LIVE"
+LOG_ROOT = Path(os.getenv("LOG_ROOT", str(DEFAULT_LOG_ROOT)))  # configurable
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
