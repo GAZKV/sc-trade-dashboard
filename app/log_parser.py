@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 from pathlib import Path
+import glob
 from datetime import datetime
 from decimal import Decimal
 
@@ -95,7 +96,11 @@ def collect_files(inputs: list[str]) -> list[Path]:
         elif p.is_dir():
             files.extend(p.rglob("*.log"))
         else:
-            files.extend(Path().glob(p_str))
+            # glob on absolute patterns (Path.glob doesn't allow them)
+            for match in glob.glob(p_str):
+                mp = Path(match)
+                if mp.is_file() and mp.suffix.lower() == ".log":
+                    files.append(mp)
     seen, uniq = set(), []
     for f in files:
         if f not in seen:
