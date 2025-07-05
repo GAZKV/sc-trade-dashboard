@@ -2,6 +2,8 @@ from decimal import Decimal
 
 BUY_MARK = "<CEntityComponentCommodityUIProvider::SendCommodityBuyRequest>"
 SELL_MARK = "<CEntityComponentCommodityUIProvider::SendCommoditySellRequest>"
+MOVE_MARK = "<CEntityComponentCommodityUIProvider::SendCommodityMoveRequest>"
+STOCK_MARK = "<CEntityComponentCommodityUIProvider::SendCommodityStockRequest>"
 
 LINE_RE = (
     r"^<?"

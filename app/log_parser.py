@@ -5,7 +5,15 @@ from pathlib import Path
 from datetime import datetime
 from decimal import Decimal
 
-from .config import BUY_MARK, SELL_MARK, LINE_RE, FIELD_RE, PRICE_FACTOR
+from .config import (
+    BUY_MARK,
+    SELL_MARK,
+    MOVE_MARK,
+    STOCK_MARK,
+    LINE_RE,
+    FIELD_RE,
+    PRICE_FACTOR,
+)
 
 __all__ = ["collect_files", "iter_records"]
 
@@ -25,14 +33,23 @@ def decode_bytes(raw: bytes) -> str:
 
 
 def _parse_line(line: str) -> dict | None:
-    if BUY_MARK not in line and SELL_MARK not in line:
+    if not any(mark in line for mark in (BUY_MARK, SELL_MARK, MOVE_MARK, STOCK_MARK)):
         return None
     m = re.match(LINE_RE, line)
     if not m:
         return None
 
     msg = m.group("msg")
-    op = "Buy" if BUY_MARK in msg else "Sell"
+    if BUY_MARK in msg:
+        op = "Buy"
+    elif SELL_MARK in msg:
+        op = "Sell"
+    elif MOVE_MARK in msg:
+        op = "Move"
+    elif STOCK_MARK in msg:
+        op = "Stock"
+    else:
+        return None
 
     fields = {k: v for k, v in re.findall(FIELD_RE, msg)}
     try:
