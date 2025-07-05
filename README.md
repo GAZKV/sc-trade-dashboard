@@ -55,17 +55,22 @@ pip install -r requirements.txt
 pytest -q
 ```
 
+
 ## Running the Live Dashboard
 
-1. Install the requirements and set the `LOG_ROOT` environment variable to the path of your Star Citizen `LIVE` folder:
+1. Install the requirements and set `LOG_ROOT` to your Star Citizen `LIVE` folder:
+
    ```bash
    pip install -r requirements.txt
    export LOG_ROOT="/path/to/StarCitizen/LIVE"
    ```
-2. Launch the FastAPI server with `uvicorn`:
+
+2. Run the FastAPI server:
+
    ```bash
    uvicorn app.web.main:app --reload
    ```
-3. Open [http://localhost:8000](http://localhost:8000) in your browser to see real-time trading data.
 
-When new log lines are written, the server broadcasts updates over WebSockets so the tables and charts refresh automatically without a page reload.
+3. Visit [http://localhost:8000](http://localhost:8000) to see real-time data.
+
+The dashboard pushes updates over WebSockets whenever new log lines appear so charts refresh automatically.
