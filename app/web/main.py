@@ -15,7 +15,10 @@ from ..analysis import analyse
 templates = Jinja2Templates(directory=Path(__file__).parent / "templates")
 
 DEFAULT_LOG_ROOT = Path.home() / "StarCitizen" / "LIVE"
-LOG_ROOT = Path(os.getenv("LOG_ROOT", str(DEFAULT_LOG_ROOT)))  # configurable
+# Resolve LOG_ROOT from the environment while falling back to the user's home
+# directory. ``Path`` accepts a ``Path`` instance so the default can remain a
+# ``Path`` object without string conversion.
+LOG_ROOT = Path(os.environ.get("LOG_ROOT", DEFAULT_LOG_ROOT))
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
