@@ -3,7 +3,7 @@ import os
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from fastapi import Request
-from fastapi import FastAPI, WebSocket
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.staticfiles import StaticFiles
 from contextlib import asynccontextmanager, suppress
 import asyncio
@@ -65,6 +65,9 @@ async def metrics():
 @app.websocket("/ws")
 async def ws_dashboard(ws: WebSocket):
     await ws.accept()
-    while True:
-        await ws.send_text(json.dumps(_latest_ctx or {}))
-        await asyncio.sleep(5)
+    try:
+        while True:
+            await ws.send_text(json.dumps(_latest_ctx or {}))
+            await asyncio.sleep(5)
+    except WebSocketDisconnect:
+        pass
