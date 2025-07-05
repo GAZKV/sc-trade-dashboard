@@ -15,10 +15,12 @@ Set the `LOG_ROOT` environment variable to your Star Citizen installation path:
 ```bash
 LOG_ROOT="/path/to/StarCitizen/LIVE" uvicorn app.web.main:app --reload
 ```
-If not set, the application defaults to `~/StarCitizen/LIVE`. On Linux and macOS
-the logs may reside under your home directory (for example
-`~/Library/Application Support/StarCitizen/LIVE`), so adjust `LOG_ROOT`
-accordingly.
+If not set, the application defaults to `~/StarCitizen/LIVE`.
+On macOS the folder is typically found under
+`$HOME/Library/Application Support/StarCitizen/LIVE` and on most Linux
+distributions under `$HOME/.local/share/StarCitizen/LIVE`.
+Set the `LOG_ROOT` environment variable to whichever location matches your
+installation before starting the server.
 
 3. Generate an HTML report from logs
 ```bash
