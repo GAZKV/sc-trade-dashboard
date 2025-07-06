@@ -14,10 +14,26 @@ const shopNames = {
 Object.assign(resourceNames, JSON.parse(localStorage.getItem("resourceNames") || "{}"));
 Object.assign(shopNames, JSON.parse(localStorage.getItem("shopNames") || "{}"));
 
+fetch("/api/names")
+  .then(r => (r.ok ? r.json() : Promise.reject()))
+  .then(data => {
+    Object.assign(resourceNames, data.resourceNames);
+    Object.assign(shopNames, data.shopNames);
+    localStorage.setItem("resourceNames", JSON.stringify(resourceNames));
+    localStorage.setItem("shopNames", JSON.stringify(shopNames));
+    if (lastData) updateDashboard(lastData);
+  })
+  .catch(() => {});
+
 function saveResourceName(guid, name) {
   if (!name) return;
   resourceNames[guid] = name;
   localStorage.setItem("resourceNames", JSON.stringify(resourceNames));
+  fetch("/api/names/resource", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ guid, name }),
+  });
   if (lastData) updateDashboard(lastData);
 }
 
@@ -25,6 +41,11 @@ function saveShopName(id, name) {
   if (!name) return;
   shopNames[id] = name;
   localStorage.setItem("shopNames", JSON.stringify(shopNames));
+  fetch("/api/names/shop", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ shop_id: id, name }),
+  });
   if (lastData) updateDashboard(lastData);
 }
 
