@@ -18,14 +18,15 @@ from ..db import (
     save_resource_name,
     save_shop_name,
 )
+from ..config_loader import get_log_root
 
 templates = Jinja2Templates(directory=Path(__file__).parent / "templates")
 
 DEFAULT_LOG_ROOT = Path.home() / "StarCitizen" / "LIVE"
-# Resolve LOG_ROOT from the environment while falling back to the user's home
-# directory. ``Path`` accepts a ``Path`` instance so the default can remain a
-# ``Path`` object without string conversion.
-LOG_ROOT = Path(os.environ.get("LOG_ROOT", DEFAULT_LOG_ROOT))
+# Resolve LOG_ROOT from environment or config.ini while falling back to the
+# user's home directory. ``Path`` accepts a ``Path`` instance so the default can
+# remain a ``Path`` object without string conversion.
+LOG_ROOT = get_log_root(DEFAULT_LOG_ROOT)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
