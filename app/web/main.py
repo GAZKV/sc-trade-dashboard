@@ -1,5 +1,4 @@
 from pathlib import Path
-import os
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from fastapi import Request
@@ -23,9 +22,10 @@ from ..config_loader import get_log_root
 templates = Jinja2Templates(directory=Path(__file__).parent / "templates")
 
 DEFAULT_LOG_ROOT = Path.home() / "StarCitizen" / "LIVE"
-# Resolve LOG_ROOT from environment or config.ini while falling back to the
-# user's home directory. ``Path`` accepts a ``Path`` instance so the default can
-# remain a ``Path`` object without string conversion.
+# Resolve LOG_ROOT from ``config.ini`` or the ``LOG_ROOT`` environment variable
+# while falling back to the user's home directory. ``Path`` accepts a ``Path``
+# instance so the default can remain a ``Path`` object without string
+# conversion.
 LOG_ROOT = get_log_root(DEFAULT_LOG_ROOT)
 
 @asynccontextmanager

@@ -1,8 +1,9 @@
-import os
 from sqlalchemy import create_engine, Column, String
 from sqlalchemy.orm import declarative_base, sessionmaker
 from .config_loader import get_database_url
 
+# Resolve the database URL via ``config.ini`` or the ``DATABASE_URL`` environment
+# variable while falling back to the local SQLite database.
 DATABASE_URL = get_database_url("sqlite:///./names.db")
 
 engine = create_engine(DATABASE_URL)
