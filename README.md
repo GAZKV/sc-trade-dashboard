@@ -22,6 +22,18 @@ distributions under `$HOME/.local/share/StarCitizen/LIVE`.
 Set the `LOG_ROOT` environment variable to whichever location matches your
 installation before starting the server.
 
+Alternatively you can create a small `config.ini` file next to the code to keep
+these settings persistent:
+
+```ini
+[settings]
+log_root = /path/to/StarCitizen/LIVE
+database_url = sqlite:///./names.db
+```
+
+Values from `config.ini` are loaded automatically and may be overridden by
+environment variables at runtime.
+
 3. Generate an HTML report from logs
 ```bash
 python scripts/generate_report.py path/to/logs/*.log report.html
