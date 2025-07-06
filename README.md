@@ -22,8 +22,9 @@ distributions under `$HOME/.local/share/StarCitizen/LIVE`.
 Set the `LOG_ROOT` environment variable to whichever location matches your
 installation before starting the server.
 
-Alternatively you can create a small `config.ini` file next to the code to keep
-these settings persistent:
+Alternatively you can keep these settings in a `config.ini` file located in the
+project root. Create it manually and define the following keys under a
+`[settings]` section:
 
 ```ini
 [settings]
@@ -31,8 +32,14 @@ log_root = /path/to/StarCitizen/LIVE
 database_url = sqlite:///./names.db
 ```
 
-Values from `config.ini` are loaded automatically and may be overridden by
-environment variables at runtime.
+When present, the application reads these values on startup. The `LOG_ROOT` and
+`DATABASE_URL` environment variables still take precedence if set, allowing you
+to override the file at runtime.
+
+Supported keys:
+
+- `log_root` – path to the Star Citizen `LIVE` folder
+- `database_url` – SQLAlchemy connection string used for the name database
 
 3. Generate an HTML report from logs
 ```bash
