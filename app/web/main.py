@@ -9,8 +9,15 @@ from contextlib import asynccontextmanager, suppress
 import asyncio
 import pandas as pd
 import json
+from pydantic import BaseModel
 from ..log_parser import collect_files, iter_records
 from ..analysis import analyse
+from ..db import (
+    init_db,
+    get_all_names,
+    save_resource_name,
+    save_shop_name,
+)
 
 templates = Jinja2Templates(directory=Path(__file__).parent / "templates")
 
@@ -22,6 +29,7 @@ LOG_ROOT = Path(os.environ.get("LOG_ROOT", DEFAULT_LOG_ROOT))
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    init_db()
     task = asyncio.create_task(watch_logs())
     try:
         yield
@@ -65,6 +73,33 @@ async def watch_logs():
 async def metrics():
 
     return _latest_ctx or {"status": "bootstrapping"}
+
+
+class ResourceItem(BaseModel):
+    guid: str
+    name: str
+
+
+class ShopItem(BaseModel):
+    shop_id: str
+    name: str
+
+
+@app.get("/api/names")
+async def all_names():
+    return get_all_names()
+
+
+@app.post("/api/names/resource")
+async def add_resource_name(item: ResourceItem):
+    save_resource_name(item.guid, item.name)
+    return {"status": "ok"}
+
+
+@app.post("/api/names/shop")
+async def add_shop_name(item: ShopItem):
+    save_shop_name(item.shop_id, item.name)
+    return {"status": "ok"}
 
 
 @app.websocket("/ws")

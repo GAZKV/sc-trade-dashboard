@@ -4,3 +4,6 @@ pandas
 matplotlib
 jinja2
 openpyxl
+sqlalchemy
+pymysql
+httpx<0.25
