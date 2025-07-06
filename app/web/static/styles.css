@@ -76,17 +76,17 @@ header .navbar {
   color: #ccc;
 }
 
-/* Tables grid and pagination */
-#tables {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
-  gap: 1rem;
+/* Tables container and pagination */
+#tableTabsContainer {
+  background: #161b22;
+  border-radius: 0.75rem;
+  padding: 1rem;
 }
 
-@media (min-width: 1920px) {
-  #tables {
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  }
+#tableTabsContainer table {
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
 .pagination-controls {
