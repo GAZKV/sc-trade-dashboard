@@ -69,11 +69,12 @@ they survive browser cache clears.
 
 ## Running Tests
 
-Install the dependencies and run `pytest` to execute the test suite which
-processes a few bundled log files:
+Install the dependencies and ensure `pytest` is available before running the
+test suite which processes a few bundled log files:
 
 ```bash
 pip install -r requirements.txt
+pip install pytest
 pytest -q
 ```
 
